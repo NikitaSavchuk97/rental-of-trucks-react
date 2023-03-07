@@ -1,0 +1,176 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	min-height: 95px;
+	height: max-content;
+
+	background-color: #2d2d2d;
+	color: white;
+}
+
+.header__logo {
+	display: flex;
+	flex-direction: row;
+
+	margin: auto 20px auto auto;
+
+	min-width: 300px;
+	height: 77px;
+}
+
+.header__logo-image {
+	margin: auto 10px auto 15px;
+
+	width: 126px;
+	height: 53px;
+}
+
+.header__logo-title {
+	margin: auto 10px auto auto;
+
+	min-width: 155px;
+	width: 155px;
+	height: 40px;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 142.19%;
+}
+
+.header__clock {
+	display: flex;
+	flex-direction: row;
+
+	margin: auto 25px auto 0;
+
+	width: 121px;
+	height: max-content;
+}
+
+.header__clock-logo {
+	width: 21px;
+	height: 21px;
+	margin: auto;
+}
+
+.header__clock-title {
+	margin: auto auto -1px 8px;
+}
+
+.header__address {
+	display: flex;
+	flex-direction: row;
+
+	margin: auto 25px auto 0;
+
+	width: 180px;
+	height: max-content;
+}
+
+.header__address-logo {
+	width: 24px;
+	height: 24px;
+	margin: auto;
+}
+
+.header__address-title {
+	margin: auto auto 3px 8px;
+}
+
+.header__contact-me {
+	cursor: pointer;
+
+	margin: auto 25px auto 0;
+
+	width: 200px;
+	height: 40px;
+
+	background-color: transparent;
+	color: white;
+
+	border: solid 1px #ffbf1d;
+
+	transition: all 0.2s ease-in-out;
+}
+
+.header__contact-me:hover {
+	opacity: 0.6;
+}
+
+.header__phone-numbers {
+	display: flex;
+	flex-direction: row;
+
+	margin: auto auto auto 0;
+
+	height: max-content;
+}
+
+.header__phone-numbers-logo {
+	width: 21px;
+	height: 21px;
+	margin: auto;
+}
+
+.header__phone-numbers-list {
+	list-style-type: none;
+	padding: 0;
+	margin: auto 15px auto 8px;
+}
+
+.header__phone-numbers-item {
+	margin: 5px 0 5px 0;
+}
+
+.header__phone-numbers-title {
+	width: 155px;
+	margin: 0;
+}
+
+
+@media screen and (max-width: 960px) {
+	.header__contact-me {
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 835px) {
+	.header__clock {
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.header__logo {
+		margin: auto auto auto 0;
+	}
+
+	.header__phone-numbers {
+		margin: auto 0 auto auto;
+	}
+
+	.header__address {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.header {
+		flex-direction: column;
+	}
+
+	.header__logo {
+		margin: auto auto 10px auto;
+	}
+
+	.header__phone-numbers {
+		margin: auto auto 20px auto;
+	}
+}

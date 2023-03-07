@@ -1,8 +1,6 @@
 .header {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 
 	width: 100%;
 	min-height: 95px;
@@ -94,8 +92,6 @@
 	color: white;
 
 	border: solid 1px #ffbf1d;
-
-	transition: all 0.2s ease-in-out;
 }
 
 .header__contact-me:hover {
@@ -124,11 +120,12 @@
 }
 
 .header__phone-numbers-item {
+	min-width: 155px;
+	width: 155px;
 	margin: 5px 0 5px 0;
 }
 
 .header__phone-numbers-title {
-	width: 155px;
 	margin: 0;
 }
 

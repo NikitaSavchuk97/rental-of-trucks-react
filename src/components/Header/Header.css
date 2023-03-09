@@ -6,6 +6,8 @@
 	min-height: 95px;
 	height: max-content;
 
+	z-index: 5;
+
 	background-color: #2d2d2d;
 	color: white;
 }
@@ -28,10 +30,9 @@
 }
 
 .header__logo-title {
-	margin: auto 10px auto auto;
+	margin: auto 15px auto auto;
 
 	min-width: 155px;
-	width: 155px;
 	height: 40px;
 
 	font-style: normal;
@@ -127,6 +128,12 @@
 
 .header__phone-numbers-title {
 	margin: 0;
+	text-decoration: none;
+	color: white;
+}
+
+.header__phone-numbers-title:hover {
+	opacity: 0.6;
 }
 
 
@@ -169,5 +176,12 @@
 
 	.header__phone-numbers {
 		margin: auto auto 20px auto;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.header__logo-title {
+		min-width: max-content;
+		font-size: 12px;
 	}
 }

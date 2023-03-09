@@ -15,7 +15,7 @@ function Header() {
 
 					<img className='header__logo-image' src={logo} alt="логотип главный" />
 					<p className='header__logo-title'>
-						Аренда спецтехники LIEBHERR c 2000 года
+						Аренда спецтехники<br />LIEBHERR c 2000 года
 					</p>
 
 				</div>
@@ -40,29 +40,27 @@ function Header() {
 
 					<ul className='header__phone-numbers-list'>
 						<li className='header__phone-numbers-item'>
-							<span className='header__phone-numbers-title'>
+							<a className='header__phone-numbers-title' href="tel:+74999299666">
 								+7 (499) 929-96-66
-							</span>
+							</a>
 						</li>
 
 						<li className='header__phone-numbers-item'>
-							<span className='header__phone-numbers-title'>
-								+7 (499) 929-96-66
-							</span>
+							<a className='header__phone-numbers-title' href="tel:+79853645518">
+								+7 (985) 364-55-18
+							</a>
 						</li>
 
 						<li className='header__phone-numbers-item'>
-							<span className='header__phone-numbers-title'>
-								+7 (499) 929-96-66
-							</span>
+							<a className='header__phone-numbers-title' href="tel:79853645518">
+								+7 (985) 226-20-30
+							</a>
 						</li>
 					</ul>
 
 				</div>
 
 			</header >
-
-			<Navigation />
 		</>
 	)
 }

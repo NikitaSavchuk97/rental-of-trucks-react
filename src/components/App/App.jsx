@@ -5,6 +5,9 @@ import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import Header from '../Header/Header';
+import Navigation from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
+import Banner from '../Banner/Banner';
 
 function App() {
 
@@ -14,12 +17,19 @@ function App() {
 		<CurrentUserContext.Provider value={currentUser}>
 			<div className='page'>
 				<Header />
+				<Navigation />
+
 				<Routes>
 
 					<Route
-					></Route>
+						path='/'
+						element={
+							<Banner />
+						}
+					/>
 
 				</Routes>
+				<Footer />
 			</div>
 		</CurrentUserContext.Provider>
 	);

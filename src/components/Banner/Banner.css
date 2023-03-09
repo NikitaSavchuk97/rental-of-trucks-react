@@ -1,0 +1,18 @@
+.banner {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+
+	width: 100%;
+	height: 600px;
+	background-color: aqua;
+}
+
+.banner__offer {
+	background-image: url(../../images/banner-offer.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 786px;
+}

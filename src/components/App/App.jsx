@@ -8,6 +8,7 @@ import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 import Banner from '../Banner/Banner';
+import Crane from '../Crane/Crane';
 
 function App() {
 
@@ -16,20 +17,28 @@ function App() {
 	return (
 		<CurrentUserContext.Provider value={currentUser}>
 			<div className='page'>
+
 				<Header />
 				<Navigation />
 
-				<Routes>
+				<main className='main'>
+					<Routes>
 
-					<Route
-						path='/'
-						element={
-							<Banner />
-						}
-					/>
+						<Route
+							path='/'
+							element={
+								<>
+									<Banner />
+									<Crane />
+								</>
+							}
+						/>
 
-				</Routes>
+					</Routes>
+				</main>
+
 				<Footer />
+
 			</div>
 		</CurrentUserContext.Provider>
 	);

@@ -5,11 +5,16 @@ import bannerLiebherr3 from '../../images/banner-liebherr-3.jpg'
 import bannerLiebherr4 from '../../images/banner-liebherr-4.jpg'
 import bannerLiebherr5 from '../../images/banner-liebherr-5.jpg'
 
+import bannerLiebherrLogoLower from '../../images/banner-liebherr-logo-lower.svg'
+
 function Banner() {
 	return (
 		<section className='banner'>
 
 			<div className='banner__offer'>
+
+				<img className='banner__logo-left' src={bannerLiebherrLogoLower} alt="" />
+
 				<div className='banner__offer-container'>
 
 					<div className='banner__line'></div>
@@ -19,7 +24,7 @@ function Banner() {
 					</h1>
 
 					<p className='banner__subtitle'>
-						Мобильные, гусеничные и башенные краны<br />LIEBHERR в аренду для любых задач и грузов.<br />Работаем по всей России
+						Мобильные, гусеничные и башенные краны LIEBHERR в аренду для любых задач и грузов.<br />Работаем по всей России
 					</p>
 
 					<div className='banner__buttons'>
@@ -31,7 +36,6 @@ function Banner() {
 							Каталог техники
 						</button>
 					</div>
-
 				</div>
 			</div>
 

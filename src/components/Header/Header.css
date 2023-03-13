@@ -6,7 +6,7 @@
 	min-height: 95px;
 	height: max-content;
 
-	z-index: 5;
+	z-index: 10;
 
 	background-color: #2d2d2d;
 	color: white;
@@ -18,7 +18,7 @@
 
 	margin: auto 20px auto auto;
 
-	min-width: 300px;
+
 	height: 77px;
 }
 
@@ -137,14 +137,14 @@
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
 	.header__contact-me {
 		display: none;
 	}
 }
 
 
-@media screen and (max-width: 835px) {
+@media screen and (max-width: 850px) {
 	.header__clock {
 		display: none;
 	}
@@ -181,7 +181,12 @@
 
 @media screen and (max-width: 425px) {
 	.header__logo-title {
+		margin: auto auto auto 5px;
 		min-width: max-content;
 		font-size: 12px;
+	}
+
+	.header__logo-image {
+		margin: auto 5px auto auto;
 	}
 }

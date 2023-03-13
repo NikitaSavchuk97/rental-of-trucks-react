@@ -1,7 +1,8 @@
 .navigation {
 	width: 100%;
 	height: 75px;
-	z-index: 5;
+
+	z-index: 10;
 
 	background-color: rgb(209, 209, 209);
 }
@@ -13,8 +14,6 @@
 
 	max-width: 1110px;
 	height: 100%;
-
-
 
 	margin: auto;
 
@@ -39,8 +38,6 @@
 
 .navigation__link {
 	color: black;
-
-
 
 	text-decoration: none;
 	cursor: pointer;
@@ -140,16 +137,17 @@
 	.navigation__submenu {
 		display: flex;
 		flex-direction: column;
-		justify-content: start;
-		align-items: start;
+		justify-content: flex-start;
+		align-items: flex-start;
 		text-align: start;
 
 		list-style-type: none;
 		padding: 0;
 
-		z-index: 1;
+		z-index: 6;
+
 		position: absolute;
-		top: -80px;
+		top: -88px;
 
 		gap: 0;
 		margin: 0;
@@ -167,15 +165,11 @@
 		padding: 5px 0 5px 0;
 		margin: 0;
 
-		border-bottom: 1px solid black;
+		border-bottom: 2px solid rgb(132, 132, 132);
 	}
 
 	.navigation__link {
 		margin: 0 auto 0 10px;
-	}
-
-	.navigation__item:last-of-type {
-		border-bottom: none;
 	}
 
 	.navigation__menu-opened {

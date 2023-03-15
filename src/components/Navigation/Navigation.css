@@ -178,7 +178,7 @@
 	}
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 550px) {
 	.navigation__submenu {
 		top: -80px;
 	}

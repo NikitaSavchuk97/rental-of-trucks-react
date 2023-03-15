@@ -9,6 +9,7 @@ import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 import Banner from '../Banner/Banner';
 import Crane from '../Crane/Crane';
+import Reliable from '../Reliable/Reliable';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
 								<>
 									<Banner />
 									<Crane />
+									<Reliable />
 								</>
 							}
 						/>

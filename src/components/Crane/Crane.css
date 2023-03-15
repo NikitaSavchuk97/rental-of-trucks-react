@@ -96,7 +96,7 @@
 
 	border: none;
 	background-color: #FFBF1D;
-	color: white;
+	color: #2d2d2d;
 }
 
 .crane__link:hover {
@@ -106,7 +106,7 @@
 .crane__slider-buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: end;
+	justify-content: flex-end;
 
 
 	max-width: 1110px;

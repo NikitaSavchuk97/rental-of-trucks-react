@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a2d5f0a.css",
-    "main.js": "/static/js/main.b468782d.js",
+    "main.css": "/static/css/main.c00e2440.css",
+    "main.js": "/static/js/main.19c77446.js",
     "static/media/banner-liebherr-2.jpg": "/static/media/banner-liebherr-2.1be7374e9d1bf298422f.jpg",
     "static/media/crane-photo-3.jpg": "/static/media/crane-photo-3.090d2ecd0246fd0cbfc4.jpg",
     "static/media/banner-offer.png": "/static/media/banner-offer.dab275273d65854e7217.png",
     "static/media/banner-liebherr-1.jpg": "/static/media/banner-liebherr-1.51e40389a04ff643bb87.jpg",
     "static/media/banner-liebherr-3.jpg": "/static/media/banner-liebherr-3.479d6a2e62cdcd6c7d7e.jpg",
+    "static/media/catalog-photo-1.jpg": "/static/media/catalog-photo-1.74009daa7d2b6cf8d25d.jpg",
     "static/media/banner-liebherr-4.jpg": "/static/media/banner-liebherr-4.fd0b4931f65cd6bdd9b4.jpg",
     "static/media/crane-photo-2.jpg": "/static/media/crane-photo-2.c0fcebe2d76ca301f0dd.jpg",
     "static/media/crane-photo-1.jpg": "/static/media/crane-photo-1.ac4e530b4bd377630806.jpg",
@@ -35,11 +36,11 @@
     "static/media/logo-search.svg": "/static/media/logo-search.63632100f9475e7a35592346ed4904d9.svg",
     "index.html": "/index.html",
     "static/media/logo-burger-open.svg": "/static/media/logo-burger-open.5f7a8ae44afadbe9f09b1bd2f9b078a0.svg",
-    "main.6a2d5f0a.css.map": "/static/css/main.6a2d5f0a.css.map",
-    "main.b468782d.js.map": "/static/js/main.b468782d.js.map"
+    "main.c00e2440.css.map": "/static/css/main.c00e2440.css.map",
+    "main.19c77446.js.map": "/static/js/main.19c77446.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a2d5f0a.css",
-    "static/js/main.b468782d.js"
+    "static/css/main.c00e2440.css",
+    "static/js/main.19c77446.js"
   ]
 }

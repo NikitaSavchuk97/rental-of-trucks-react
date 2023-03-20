@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rental-of-trucks-react/static/css/main.dd825963.css",
-    "main.js": "/rental-of-trucks-react/static/js/main.2099a2c9.js",
+    "main.css": "/rental-of-trucks-react/static/css/main.5dd6e39d.css",
+    "main.js": "/rental-of-trucks-react/static/js/main.9acb88c0.js",
     "static/media/banner-liebherr-2.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-2.1be7374e9d1bf298422f.jpg",
     "static/media/crane-photo-3.jpg": "/rental-of-trucks-react/static/media/crane-photo-3.090d2ecd0246fd0cbfc4.jpg",
     "static/media/banner-offer.png": "/rental-of-trucks-react/static/media/banner-offer.dab275273d65854e7217.png",
@@ -43,11 +43,11 @@
     "static/media/logo-search.svg": "/rental-of-trucks-react/static/media/logo-search.63632100f9475e7a35592346ed4904d9.svg",
     "index.html": "/rental-of-trucks-react/index.html",
     "static/media/logo-burger-open.svg": "/rental-of-trucks-react/static/media/logo-burger-open.5f7a8ae44afadbe9f09b1bd2f9b078a0.svg",
-    "main.dd825963.css.map": "/rental-of-trucks-react/static/css/main.dd825963.css.map",
-    "main.2099a2c9.js.map": "/rental-of-trucks-react/static/js/main.2099a2c9.js.map"
+    "main.5dd6e39d.css.map": "/rental-of-trucks-react/static/css/main.5dd6e39d.css.map",
+    "main.9acb88c0.js.map": "/rental-of-trucks-react/static/js/main.9acb88c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd825963.css",
-    "static/js/main.2099a2c9.js"
+    "static/css/main.5dd6e39d.css",
+    "static/js/main.9acb88c0.js"
   ]
 }

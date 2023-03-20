@@ -6,12 +6,15 @@
 	min-height: 620px;
 }
 
+.crane__title-container {
+	padding: 0 15px;
+}
+
 .crane__title-orange {
+
 	max-width: 1110px;
 	width: 100%;
-
 	margin: 50px auto 55px auto;
-	padding: 0 15px;
 
 	color: #FF971D;
 

@@ -43,9 +43,13 @@ function Crane() {
 	return (
 		<section className='crane'>
 
-			<h2 className='crane__title-orange' >
-				Спецтехника <span className='crane__title'>в аренду</span>
-			</h2>
+			<div className='crane__title-container'>
+				<h2 className='crane__title-orange' >
+					Спецтехника <span className='crane__title'>в аренду</span>
+				</h2>
+			</div>
+
+
 
 			<div className='crane__slider'>
 

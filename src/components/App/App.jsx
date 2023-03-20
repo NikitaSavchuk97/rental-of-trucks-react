@@ -10,6 +10,7 @@ import Footer from '../Footer/Footer';
 import Banner from '../Banner/Banner';
 import Crane from '../Crane/Crane';
 import Reliable from '../Reliable/Reliable';
+import Catalog from '../Catalog/Catalog';
 
 function App() {
 
@@ -22,27 +23,27 @@ function App() {
 				<Header />
 				<Navigation />
 
-				<main className='main'>
-					<Routes>
+				<Routes>
 
-						<Route
-							path='/'
-							element={
-								<>
-									<Banner />
-									<Crane />
-									<Reliable />
-								</>
-							}
-						/>
+					<Route
+						exact
+						path='/*'
+						element={
+							<>
+								<Banner />
+								<Crane />
+								<Reliable />
+								<Catalog />
+							</>
+						}
+					/>
 
-					</Routes>
-				</main>
+				</Routes>
 
 				<Footer />
 
 			</div>
-		</CurrentUserContext.Provider>
+		</CurrentUserContext.Provider >
 	);
 }
 

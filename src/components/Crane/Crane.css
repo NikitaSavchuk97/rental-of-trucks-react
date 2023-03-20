@@ -1,11 +1,9 @@
 .crane {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 
 	min-height: 620px;
-
-	margin: 0 0 50px 0;
-	padding: 0 15px 0 15px;
 }
 
 .crane__title-orange {
@@ -13,6 +11,7 @@
 	width: 100%;
 
 	margin: 50px auto 55px auto;
+	padding: 0 15px;
 
 	color: #FF971D;
 
@@ -31,6 +30,7 @@
 	flex-direction: row;
 
 	margin: 0 auto 0 auto;
+	padding: 0 15px;
 
 	height: max-content;
 	overflow: hidden;

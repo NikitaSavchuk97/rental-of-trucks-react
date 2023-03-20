@@ -106,6 +106,7 @@
 	margin: auto auto auto 0;
 
 	height: max-content;
+	width: max-content;
 }
 
 .header__phone-numbers-logo {
@@ -127,6 +128,8 @@
 }
 
 .header__phone-numbers-title {
+	display: flex;
+	width: max-content;
 	margin: 0;
 	text-decoration: none;
 	color: white;

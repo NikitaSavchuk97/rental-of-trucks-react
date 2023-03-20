@@ -197,6 +197,23 @@
 	}
 }
 
+
+@media screen and (max-width: 550px) {
+	.reliable__title {
+		font-size: 32px;
+	}
+
+	.reliable__text {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.reliable__title {
+		font-size: 23px;
+	}
+}
+
 @media screen and (max-width: 475px) {
 
 	.reliable__icons {

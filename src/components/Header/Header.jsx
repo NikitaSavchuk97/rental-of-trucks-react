@@ -3,8 +3,6 @@ import logo from '../../images/logo.svg';
 import logoClock from '../../images/logo-clock.svg';
 import logoSpot from '../../images/logo-spot.svg';
 import logoPhone from '../../images/logo-phone.svg';
-import Navigation from '../Navigation/Navigation';
-
 
 function Header() {
 	return (

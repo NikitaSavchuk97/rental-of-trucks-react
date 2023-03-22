@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react';
+
 import './Catalog.css';
+
 import catalogPhoto1 from '../../images/catalog-photo-1.jpg';
 import catalogPhoto2 from '../../images/catalog-photo-2.jpg';
 import catalogPhoto3 from '../../images/catalog-photo-3.jpg';
@@ -8,8 +11,8 @@ import catalogPhoto6 from '../../images/catalog-photo-6.jpg';
 import catalogPhoto7 from '../../images/catalog-photo-7.jpg';
 import catalogPhoto8 from '../../images/catalog-photo-8.jpg';
 
-import Card from '../Card/Card';
-import { useEffect, useState } from 'react';
+import CatalogCard from '../CatalogCard/CatalogCard';
+import SliderArrows from '../SliderArrows/SliderArrows';
 
 function Catalog() {
 
@@ -24,23 +27,24 @@ function Catalog() {
 		{ id: 7, image: catalogPhoto8, nameRU: 'Перегружатель', loadCapacity: 5, craneLength: 1, link: '/excavator' },
 	]
 
-	const [currentIndex, setCurrentIndex] = useState(1)
-	const [length, setLength] = useState(trucks.length)
+	const [currentIndex, setCurrentIndex] = useState(0)
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-	const [indexForPrev, setIndexForPrev] = useState(1);
-	const [indexForNext, setIndexForNext] = useState(2);
+	const [indexForPrev, setIndexForPrev] = useState(0);
+	const [indexForNext, setIndexForNext] = useState(1);
 
 	function checkWindowWidth() {
-		if (windowWidth < 1200) {
-			setIndexForPrev(0);
-			setIndexForNext(1);
-			//setCurrentIndex(0);
+		setWindowWidth(window.innerWidth);
+		if (windowWidth > 1200) {
+			setIndexForPrev(1);
+			setIndexForNext(2);
+			if (currentIndex !== 1) {
+				setCurrentIndex(1);
+			}
 		}
-
 	}
 
 	const next = () => {
-		if (currentIndex < (length - 1)) {
+		if (currentIndex < (trucks.length - 1)) {
 			setCurrentIndex(prevState => prevState + 1)
 		}
 	}
@@ -52,10 +56,8 @@ function Catalog() {
 	}
 
 	useEffect(() => {
-		setWindowWidth(window.innerWidth)
-		setLength(trucks.length)
 		checkWindowWidth()
-	}, [trucks, windowWidth])
+	}, [windowWidth])
 
 	return (
 		<section className='catalog'>
@@ -66,39 +68,27 @@ function Catalog() {
 					Каталог техники
 				</h2>
 
-				<div className='catalog__buttons'>
-
-					{
-						currentIndex > indexForPrev &&
-						<button className='catalog__prev' onClick={prev}>
-							<span className='catalog__prev-box'></span>
-							&larr;
-						</button>
-					}
-
-
-					{
-						currentIndex < (length - indexForNext) &&
-						<button className='catalog__next' onClick={next}>
-							&rarr;
-							<span className='catalog__next-box'></span>
-						</button>
-					}
-
-				</div>
+				<SliderArrows
+					prev={prev}
+					next={next}
+					length={trucks.length}
+					currentIndex={currentIndex}
+					indexForNext={indexForNext}
+					indexForPrev={indexForPrev}
+				/>
 
 			</div>
 
-			<div className='carousel-content-scroll'>
-				<div className="carousel-content-wrapper">
+			<div className='catalog__content-scroll'>
+				<div className="catalog__content-wrapper">
 					<div
-						className="carousel-content"
+						className="catalog__content"
 						style={{ transform: `translateX(-${currentIndex * 100}%)` }}
 					>
 						{
 							trucks.map((card) => {
 								return (
-									<Card
+									<CatalogCard
 										key={card.id}
 										card={card}
 									/>
@@ -108,7 +98,6 @@ function Catalog() {
 					</div>
 				</div>
 			</div>
-
 
 			<button className='catalog__link'>
 				Перейти в каталог
@@ -122,36 +111,5 @@ export default Catalog;
 
 
 /*
-
-<button className='catalog__prev'>
-					Предыдущая
-				</button>
-
-				<button className='catalog__next'>
-					Следующая
-				</button>
-
-				<div className='catalog__item'>
-					<img className='catalog__image' src={catalogPhoto1} alt="" />
-					<h3>Гусеничный кран Liebherr LR 1750</h3>
-				</div>
-
-
-				{
-				currentIndex > 1 &&
-				<button onClick={prev} className="left-arrow">
-					&lt;
-				</button>
-			}
-
-			
-
-			{
-				currentIndex < (length - 2) &&
-				<button onClick={next} className="right-arrow">
-					&gt;
-				</button>
-			}
-
 
 */

@@ -1,44 +1,36 @@
+import { useState } from 'react';
+
 import './Crane.css';
+
 import cranePhoto1 from '../../images/crane-photo-1.jpg'
 import cranePhoto2 from '../../images/crane-photo-2.jpg'
 import cranePhoto3 from '../../images/crane-photo-3.jpg'
 
-
+import SliderArrows from '../SliderArrows/SliderArrows';
+import CraneCard from '../CraneCard/CraneCard';
 
 function Crane() {
 
-	let slideIndex = 1;
-	const slides = document.getElementsByClassName('crane__content')
+	const trucks = [
+		{ id: 0, image: cranePhoto1, nameRU: 'Гусиничный кран', about: 'Аренда гусеничного крана – актуальная услуга для многих строительных площадок. Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.', link: '/excavator' },
+		{ id: 1, image: cranePhoto2, nameRU: 'Автомбильный кран', about: 'Аренда гусеничного крана – актуальная услуга для многих строительных площадок. Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.', link: '/excavator' },
+		{ id: 2, image: cranePhoto3, nameRU: 'Фронтальный погрузчик', about: 'Аренда гусеничного крана – актуальная услуга для многих строительных площадок. Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.', link: '/excavator' },
+	]
 
-	function nextSlide() {
-		slideIndex += 1
-		if (slideIndex > slides.length) {
-			slideIndex = 1
+	const [currentIndex, setCurrentIndex] = useState(0)
+
+	const next = () => {
+		if (currentIndex < (trucks.length - 1)) {
+			setCurrentIndex(prevState => prevState + 1)
 		}
-		if (slideIndex < 1) {
-			slideIndex = slides.length
-		}
-		for (let slide of slides) {
-			slide.style.display = "none";
-		}
-		slides[slideIndex - 1].style.display = "flex";
-		slides[slideIndex - 1].style.animation = "next 1s ease-in-out";
 	}
 
-	function previousSlide() {
-		slideIndex -= 1
-		if (slideIndex > slides.length) {
-			slideIndex = 1
+	const prev = () => {
+		if (currentIndex > 0) {
+			setCurrentIndex(prevState => prevState - 1)
 		}
-		if (slideIndex < 1) {
-			slideIndex = slides.length
-		}
-		for (let slide of slides) {
-			slide.style.display = "none";
-		}
-		slides[slideIndex - 1].style.display = "flex";
-		slides[slideIndex - 1].style.animation = "previous 1s ease-in-out";
 	}
+
 
 	return (
 		<section className='crane'>
@@ -49,65 +41,33 @@ function Crane() {
 				</h2>
 			</div>
 
-
-
 			<div className='crane__slider'>
-
-				<div className='crane__content crane__content_type_active'>
-					<img className='crane__image' src={cranePhoto1} alt="" />
-					<div className='crane__text'>
-						<h3 className='crane__text-title'>
-							Гусеничные краны
-						</h3>
-						<p className='crane__text-subtitle'>
-							Аренда гусеничного крана – актуальная услуга для многих строительных площадок.
-							Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.
-						</p>
-						<button type='button' className='crane__link' href="/">Выбрать спецтехнику</button>
-					</div>
-				</div>
-
-				<div className='crane__content'>
-					<img className='crane__image' src={cranePhoto2} alt="" />
-					<div className='crane__text' >
-						<h3 className='crane__text-title' >
-							Автомобильные краны
-						</h3>
-						<p className='crane__text-subtitle'>
-							Аренда гусеничного крана – актуальная услуга для многих строительных площадок.
-							Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.
-						</p>
-						<button type='button' className='crane__link' href="/">Выбрать спецтехнику</button>
-					</div>
-				</div>
-
-				<div className='crane__content'>
-					<img className='crane__image' src={cranePhoto3} alt="" />
-					<div className='crane__text'>
-						<h3 className='crane__text-title'>
-							Фронтальные погрузчики
-						</h3>
-						<p className='crane__text-subtitle'>
-							Аренда гусеничного крана – актуальная услуга для многих строительных площадок.
-							Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.
-						</p>
-						<button type='button' className='crane__link' href="/">Выбрать спецтехнику</button>
-					</div>
+				<div
+					className='crane__wrapper'
+					style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+				>
+					{
+						trucks.map((card) => {
+							return (
+								<CraneCard
+									key={card.id}
+									card={card}
+								/>
+							)
+						})
+					}
 				</div>
 
 			</div>
 
-			<div className='crane__slider-buttons'>
-				<button className='crane__button' onClick={previousSlide}>
-					&larr;
-				</button>
-
-				<button className='crane__button' onClick={nextSlide}>
-					&rarr;
-				</button>
-			</div>
-
-
+			<SliderArrows
+				prev={prev}
+				next={next}
+				length={trucks.length}
+				currentIndex={currentIndex}
+				indexForNext={1}
+				indexForPrev={0}
+			/>
 
 		</section >
 	)

@@ -31,96 +31,6 @@
 	line-height: 141.69%;
 }
 
-.catalog__buttons {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-
-	max-width: 1110px;
-	margin: 0 auto;
-
-	width: 100%;
-	height: 35px;
-
-	position: relative;
-}
-
-.catalog__prev {
-	position: absolute;
-	top: 0;
-	right: 90px;
-	display: flex;
-	align-items: center;
-
-	cursor: pointer;
-
-	background-color: transparent;
-	border: none;
-
-	font-size: 20px;
-
-	padding: 0;
-	margin: 0 20px 0 0;
-
-	width: max-content;
-}
-
-.catalog__prev-box {
-	border: none;
-
-	margin: 0 -15px 0 0;
-	padding: 0;
-
-	width: 35px;
-	height: 35px;
-}
-
-.catalog__prev:hover .catalog__prev-box {
-	box-sizing: border-box;
-	border: 1px solid orange;
-}
-
-
-
-
-.catalog__next {
-
-	position: absolute;
-	top: 0;
-	right: 20px;
-
-	cursor: pointer;
-
-	display: flex;
-	align-items: center;
-
-	background-color: transparent;
-	border: none;
-
-	font-size: 20px;
-
-	padding: 0;
-	margin: 0 20px 0 0;
-
-	width: max-content;
-}
-
-.catalog__next-box {
-	border: none;
-
-	margin: 0 0 0 -15px;
-	padding: 0;
-
-	width: 35px;
-	height: 35px;
-}
-
-.catalog__next:hover .catalog__next-box {
-	box-sizing: border-box;
-	border: 1px solid orange;
-}
-
-
 .catalog__link {
 	width: 250px;
 	height: 50px;
@@ -134,42 +44,43 @@
 
 
 
+.catalog__content-scroll {
+	scroll-snap-type: both mandatory;
+	scroll-padding: 1rem;
 
-
-
-
-
-
-
-
-.carousel-content-scroll {
 	overflow: scroll;
 	width: 100%;
 	height: 100%;
-}
 
-.carousel-content-wrapper {
-	width: 400px;
-	margin: auto;
-}
-
-.carousel-content {
-	display: flex;
-	transition: all 250ms linear;
 	-ms-overflow-style: none;
 	/* hide scrollbar in IE and Edge */
 	scrollbar-width: none;
 	/* hide scrollbar in Firefox */
 }
 
-/* hide scrollbar in webkit browser */
-.carousel-content-scroll::-webkit-scrollbar,
-.carousel-content::-webkit-scrollbar,
-.carousel-content-wrapper::-webkit-scrollbar {
-	display: none;
+.catalog__content-wrapper {
+	width: 400px;
+	margin: auto;
 }
 
-.carousel-content>* {
+.catalog__content {
+	display: flex;
+	transition: all 0.4s ease-in-out;
+}
+
+/* hide scrollbar in webkit browser */
+.catalog__content-scroll::-webkit-scrollbar,
+.catalog__content::-webkit-scrollbar,
+.catalog__content-wrapper::-webkit-scrollbar {
+	display: none;
+
+	-ms-overflow-style: none;
+	/* hide scrollbar in IE and Edge */
+	scrollbar-width: none;
+	/* hide scrollbar in Firefox */
+}
+
+.catalog__content>* {
 	width: 400px;
 	height: 600px;
 	flex-shrink: 0;
@@ -188,11 +99,11 @@
 		font-size: 23px;
 	}
 
-	.carousel-content {
+	.catalog__content {
 		width: 310px;
 	}
 
-	.carousel-content-wrapper {
+	.catalog__content-wrapper {
 		width: 310px;
 
 	}

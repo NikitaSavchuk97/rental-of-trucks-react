@@ -1,8 +1,9 @@
-//import logo from './logo.svg';
-import './App.css';
-import CurrentUserContext from '../../contexts/CurrentUserContext';
 import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
+
+import './App.css';
+
+import CurrentUserContext from '../../contexts/CurrentUserContext';
 
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';

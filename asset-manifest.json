@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.css": "/rental-of-trucks-react/static/css/main.ef10e634.css",
-    "main.js": "/rental-of-trucks-react/static/js/main.a574ec88.js",
+    "main.css": "/rental-of-trucks-react/static/css/main.ba11bd51.css",
+    "main.js": "/rental-of-trucks-react/static/js/main.7b96404b.js",
+    "static/media/realized-photo-1.jpg": "/rental-of-trucks-react/static/media/realized-photo-1.23b57f6fc935936e8ff7.jpg",
+    "static/media/realized-photo-5.jpg": "/rental-of-trucks-react/static/media/realized-photo-5.afb1cd50744b17b0c02f.jpg",
     "static/media/banner-liebherr-2.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-2.1be7374e9d1bf298422f.jpg",
+    "static/media/realized-photo-2.jpg": "/rental-of-trucks-react/static/media/realized-photo-2.6bacb163863331ae0eeb.jpg",
     "static/media/crane-photo-3.jpg": "/rental-of-trucks-react/static/media/crane-photo-3.090d2ecd0246fd0cbfc4.jpg",
     "static/media/banner-offer.png": "/rental-of-trucks-react/static/media/banner-offer.dab275273d65854e7217.png",
     "static/media/catalog-photo-4.jpg": "/rental-of-trucks-react/static/media/catalog-photo-4.d0259df9dc46980dd1b4.jpg",
     "static/media/catalog-photo-8.jpg": "/rental-of-trucks-react/static/media/catalog-photo-8.fd94509e26f2ee1b5bfd.jpg",
+    "static/media/realized-photo-7.jpg": "/rental-of-trucks-react/static/media/realized-photo-7.3191ce7fc1db03cfd0b9.jpg",
+    "static/media/realized-photo-6.jpg": "/rental-of-trucks-react/static/media/realized-photo-6.f57db1f0d2cc5a521ac6.jpg",
     "static/media/catalog-photo-5.jpg": "/rental-of-trucks-react/static/media/catalog-photo-5.9bbd9f6404200b76ce4b.jpg",
     "static/media/banner-liebherr-1.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-1.51e40389a04ff643bb87.jpg",
+    "static/media/realized-photo-3.jpg": "/rental-of-trucks-react/static/media/realized-photo-3.0957be23541bcfc6decb.jpg",
     "static/media/catalog-photo-7.jpg": "/rental-of-trucks-react/static/media/catalog-photo-7.40557c15e75ecf2482da.jpg",
     "static/media/banner-liebherr-3.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-3.479d6a2e62cdcd6c7d7e.jpg",
     "static/media/banner-liebherr-4.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-4.fd0b4931f65cd6bdd9b4.jpg",
@@ -20,6 +26,7 @@
     "static/media/Inter-Medium.woff": "/rental-of-trucks-react/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/rental-of-trucks-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
     "static/media/Inter-Regular.woff": "/rental-of-trucks-react/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/realized-photo-4.jpg": "/rental-of-trucks-react/static/media/realized-photo-4.50ba7f7070396ab2399b.jpg",
     "static/media/catalog-photo-6.jpg": "/rental-of-trucks-react/static/media/catalog-photo-6.cfcd7a2094aae3cc79ec.jpg",
     "static/media/Inter-Medium.woff2": "/rental-of-trucks-react/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
     "static/media/Inter-Black.woff2": "/rental-of-trucks-react/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
@@ -45,11 +52,11 @@
     "static/media/logo-arrow-right.svg": "/rental-of-trucks-react/static/media/logo-arrow-right.196609e3cfd223014a3c9262f6950752.svg",
     "static/media/logo-arrow-left.svg": "/rental-of-trucks-react/static/media/logo-arrow-left.2c0acd873cf05b2a2a09f20ad13cb1bc.svg",
     "static/media/logo-burger-open.svg": "/rental-of-trucks-react/static/media/logo-burger-open.5f7a8ae44afadbe9f09b1bd2f9b078a0.svg",
-    "main.ef10e634.css.map": "/rental-of-trucks-react/static/css/main.ef10e634.css.map",
-    "main.a574ec88.js.map": "/rental-of-trucks-react/static/js/main.a574ec88.js.map"
+    "main.ba11bd51.css.map": "/rental-of-trucks-react/static/css/main.ba11bd51.css.map",
+    "main.7b96404b.js.map": "/rental-of-trucks-react/static/js/main.7b96404b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef10e634.css",
-    "static/js/main.a574ec88.js"
+    "static/css/main.ba11bd51.css",
+    "static/js/main.7b96404b.js"
   ]
 }

@@ -24,7 +24,9 @@
 	justify-content: center;
 	align-items: center;
 
-	overflow: hidden;
+	overflow: scroll;
+	scroll-snap-type: both mandatory;
+	scroll-padding: 1rem;
 
 	margin: 0 0 10px 0;
 
@@ -32,10 +34,6 @@
 }
 
 .realized__preview-wrapper {
-	border: 1px solid red;
-
-
-
 	display: flex;
 	flex-direction: row;
 	width: 190px;
@@ -46,6 +44,7 @@
 }
 
 .realized__preview-wrapper>* {
+
 	flex-shrink: 0;
 }
 
@@ -126,8 +125,17 @@
 	}
 }
 
+@media screen and (max-width: 500px) {
+	.realized__preview-item {
+		height: 66px;
+		width: 100px;
+	}
+}
+
 @media screen and (max-width: 425px) {
 	.realized__title {
 		font-size: 23px;
 	}
 }
+
+@media screen and (max-width: 400px) {}

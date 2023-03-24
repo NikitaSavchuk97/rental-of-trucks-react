@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 
 import './Realized.css';
 
@@ -90,14 +90,11 @@ function Realized() {
 	]
 
 
-
-
-
 	return (
 		<section className='realized'>
 			<h2 className='realized__title'>Реализованные проекты</h2>
 
-			<div className='realized__preview draggble '>
+			<div className='realized__preview' >
 				<div className='realized__preview-wrapper'>
 					{
 						trucks.map((card) => {

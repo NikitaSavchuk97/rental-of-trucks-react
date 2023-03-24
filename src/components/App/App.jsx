@@ -12,6 +12,7 @@ import Banner from '../Banner/Banner';
 import Crane from '../Crane/Crane';
 import Reliable from '../Reliable/Reliable';
 import Catalog from '../Catalog/Catalog';
+import Realized from '../Realized/Realized';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
 								<Banner />
 								<Crane />
 								<Reliable />
+								<Realized />
 								<Catalog />
 							</>
 						}

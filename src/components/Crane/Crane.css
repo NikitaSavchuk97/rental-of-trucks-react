@@ -63,8 +63,6 @@
 	flex-direction: row;
 	width: 100%;
 	transition: all 0.5s ease-in-out;
-
-
 }
 
 .crane__wrapper::-webkit-scrollbar {

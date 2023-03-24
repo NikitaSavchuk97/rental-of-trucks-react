@@ -31,7 +31,6 @@ function Crane() {
 		}
 	}
 
-
 	return (
 		<section className='crane'>
 

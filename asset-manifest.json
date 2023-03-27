@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rental-of-trucks-react/static/css/main.a1f4a0b0.css",
-    "main.js": "/rental-of-trucks-react/static/js/main.f55dabef.js",
+    "main.css": "/rental-of-trucks-react/static/css/main.a06ac989.css",
+    "main.js": "/rental-of-trucks-react/static/js/main.75187337.js",
     "static/media/realized-photo-1.jpg": "/rental-of-trucks-react/static/media/realized-photo-1.23b57f6fc935936e8ff7.jpg",
     "static/media/realized-photo-5.jpg": "/rental-of-trucks-react/static/media/realized-photo-5.afb1cd50744b17b0c02f.jpg",
     "static/media/banner-liebherr-2.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-2.1be7374e9d1bf298422f.jpg",
@@ -27,6 +27,7 @@
     "static/media/Inter-Black.woff": "/rental-of-trucks-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
     "static/media/Inter-Regular.woff": "/rental-of-trucks-react/static/media/Inter-Regular.8c206db99195777c6769.woff",
     "static/media/realized-photo-4.jpg": "/rental-of-trucks-react/static/media/realized-photo-4.50ba7f7070396ab2399b.jpg",
+    "static/media/delivery-background.svg": "/rental-of-trucks-react/static/media/delivery-background.f40a15ed92d4d1f891c7.svg",
     "static/media/catalog-photo-6.jpg": "/rental-of-trucks-react/static/media/catalog-photo-6.cfcd7a2094aae3cc79ec.jpg",
     "static/media/Inter-Medium.woff2": "/rental-of-trucks-react/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
     "static/media/Inter-Black.woff2": "/rental-of-trucks-react/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
@@ -57,11 +58,11 @@
     "static/media/logo-arrow-right.svg": "/rental-of-trucks-react/static/media/logo-arrow-right.196609e3cfd223014a3c9262f6950752.svg",
     "static/media/logo-arrow-left.svg": "/rental-of-trucks-react/static/media/logo-arrow-left.2c0acd873cf05b2a2a09f20ad13cb1bc.svg",
     "static/media/logo-burger-open.svg": "/rental-of-trucks-react/static/media/logo-burger-open.5f7a8ae44afadbe9f09b1bd2f9b078a0.svg",
-    "main.a1f4a0b0.css.map": "/rental-of-trucks-react/static/css/main.a1f4a0b0.css.map",
-    "main.f55dabef.js.map": "/rental-of-trucks-react/static/js/main.f55dabef.js.map"
+    "main.a06ac989.css.map": "/rental-of-trucks-react/static/css/main.a06ac989.css.map",
+    "main.75187337.js.map": "/rental-of-trucks-react/static/js/main.75187337.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1f4a0b0.css",
-    "static/js/main.f55dabef.js"
+    "static/css/main.a06ac989.css",
+    "static/js/main.75187337.js"
   ]
 }

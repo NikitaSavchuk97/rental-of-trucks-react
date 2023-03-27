@@ -14,11 +14,11 @@ import logoYandex from '../../images/logo-yandex.svg';
 
 function Footer() {
 	return (
-		<div className='footer'>
+		<footer className='footer'>
 			<div className='footer__container'>
 
 				<div className='footer__logo'>
-					<img className='footer__logo-image' src={logo} alt="" />
+					<img className='footer__logo-image' src={logo} alt="лого" />
 					<p className='footer__logo-title'>
 						Аренда мобильных и<br />гусеничных кранов<br />LIEBHERR
 					</p>
@@ -32,43 +32,43 @@ function Footer() {
 					<h3 className='footer__nav-list-title'>Клиентам</h3>
 					<ul className='footer__nav-list-links'>
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								О компании
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Услуги
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Каталог техники
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Аренда кранов
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Наши работы
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Цены
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Контакты
 							</a>
 						</li>
@@ -79,25 +79,25 @@ function Footer() {
 					<h3 className='footer__nav-list-title'>Техника</h3>
 					<ul className='footer__nav-list-links'>
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Гусиничные краны
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Мобильные краны
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Низеорамные краны
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Модульные платформы
 							</a>
 						</li>
@@ -108,25 +108,25 @@ function Footer() {
 					<h3 className='footer__nav-list-title'>Услуги</h3>
 					<ul className='footer__nav-list-links'>
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Аренда гусеничного крана
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Аренда мобильного крана
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Аренда башенного крана
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
+							<a className='footer__nav-list-item-link' href="#">
 								Перевозка негабаритного груза
 							</a>
 						</li>
@@ -147,31 +147,31 @@ function Footer() {
 
 					<ul className='footer__icon-links'>
 						<li className='footer__icon-links-item'>
-							<a href="">
+							<a href="#">
 								<img className='footer__icon' src={logoInstagram} alt="инстаграм" />
 							</a>
 						</li>
 
 						<li className='footer__icon-links-item'>
-							<a href="">
+							<a href="#">
 								<img className='footer__icon' src={logoTwitter} alt="твиттер" />
 							</a>
 						</li>
 
 						<li className='footer__icon-links-item'>
-							<a href="">
+							<a href="#">
 								<img className='footer__icon' src={logoWhatsapp} alt="вотсапп" />
 							</a>
 						</li>
 
 						<li className='footer__icon-links-item'>
-							<a href="">
+							<a href="#">
 								<img className='footer__icon' src={logoVkontakte} alt="вконтакте" />
 							</a>
 						</li>
 
 						<li className='footer__icon-links-item'>
-							<a href="">
+							<a href="#">
 								<img className='footer__icon' src={logoYandex} alt="яндекс" />
 							</a>
 						</li>
@@ -203,7 +203,7 @@ function Footer() {
 				</nav>
 
 			</div>
-		</div>
+		</footer>
 	)
 }
 

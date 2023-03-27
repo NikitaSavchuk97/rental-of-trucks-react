@@ -15,6 +15,7 @@ import Catalog from '../Catalog/Catalog';
 import Realized from '../Realized/Realized';
 import Price from '../Price/Price';
 import Delivery from '../Delivery/Delivery';
+import About from '../About/About';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
 						exact
 						path='/*'
 						element={
-							<>
+							<main className='main'>
 								<Banner />
 								<Crane />
 								<Reliable />
@@ -41,7 +42,8 @@ function App() {
 								<Catalog />
 								<Price />
 								<Delivery />
-							</>
+								<About />
+							</main>
 						}
 					/>
 

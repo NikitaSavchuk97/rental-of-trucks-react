@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rental-of-trucks-react/static/css/main.b68b4631.css",
-    "main.js": "/rental-of-trucks-react/static/js/main.f2f2d145.js",
+    "main.css": "/rental-of-trucks-react/static/css/main.a1f4a0b0.css",
+    "main.js": "/rental-of-trucks-react/static/js/main.f55dabef.js",
     "static/media/realized-photo-1.jpg": "/rental-of-trucks-react/static/media/realized-photo-1.23b57f6fc935936e8ff7.jpg",
     "static/media/realized-photo-5.jpg": "/rental-of-trucks-react/static/media/realized-photo-5.afb1cd50744b17b0c02f.jpg",
     "static/media/banner-liebherr-2.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-2.1be7374e9d1bf298422f.jpg",
@@ -32,9 +32,14 @@
     "static/media/Inter-Black.woff2": "/rental-of-trucks-react/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Regular.woff2": "/rental-of-trucks-react/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "static/media/banner-liebherr-5.jpg": "/rental-of-trucks-react/static/media/banner-liebherr-5.5de1a32ad3d2436f1196.jpg",
+    "static/media/price-03.svg": "/rental-of-trucks-react/static/media/price-03.3175e721a1cbc95267b902d990115f55.svg",
+    "static/media/price-02.svg": "/rental-of-trucks-react/static/media/price-02.e4fed2b8358c6949715cc784f7430608.svg",
     "static/media/logo.svg": "/rental-of-trucks-react/static/media/logo.be5b200bed54c4337233782e2b32bc98.svg",
+    "static/media/price-04.svg": "/rental-of-trucks-react/static/media/price-04.30262f137e106f102c8ff64444039c4c.svg",
     "static/media/reliable-logo-3.svg": "/rental-of-trucks-react/static/media/reliable-logo-3.eb948bbb587d972f5d3356d66654d477.svg",
+    "static/media/price-01.svg": "/rental-of-trucks-react/static/media/price-01.25d9259f9f62025ceefe2ac546235cac.svg",
     "static/media/reliable-logo-2.svg": "/rental-of-trucks-react/static/media/reliable-logo-2.10a078dbefbf4b3f287cda6695e2ddba.svg",
+    "static/media/realized-logo.svg": "/rental-of-trucks-react/static/media/realized-logo.2f63020c26ff2bbfe4f59d8d14764c02.svg",
     "static/media/logo-phone.svg": "/rental-of-trucks-react/static/media/logo-phone.6d218cbf0d91bf4b54cb53b55f4996c6.svg",
     "static/media/reliable-logo-4.svg": "/rental-of-trucks-react/static/media/reliable-logo-4.b884a22c75761be9e48ee09ae01b6bcf.svg",
     "static/media/logo-instagram.svg": "/rental-of-trucks-react/static/media/logo-instagram.8d3fe329601e940365c11d0159d1c06f.svg",
@@ -52,11 +57,11 @@
     "static/media/logo-arrow-right.svg": "/rental-of-trucks-react/static/media/logo-arrow-right.196609e3cfd223014a3c9262f6950752.svg",
     "static/media/logo-arrow-left.svg": "/rental-of-trucks-react/static/media/logo-arrow-left.2c0acd873cf05b2a2a09f20ad13cb1bc.svg",
     "static/media/logo-burger-open.svg": "/rental-of-trucks-react/static/media/logo-burger-open.5f7a8ae44afadbe9f09b1bd2f9b078a0.svg",
-    "main.b68b4631.css.map": "/rental-of-trucks-react/static/css/main.b68b4631.css.map",
-    "main.f2f2d145.js.map": "/rental-of-trucks-react/static/js/main.f2f2d145.js.map"
+    "main.a1f4a0b0.css.map": "/rental-of-trucks-react/static/css/main.a1f4a0b0.css.map",
+    "main.f55dabef.js.map": "/rental-of-trucks-react/static/js/main.f55dabef.js.map"
   },
   "entrypoints": [
-    "static/css/main.b68b4631.css",
-    "static/js/main.f2f2d145.js"
+    "static/css/main.a1f4a0b0.css",
+    "static/js/main.f55dabef.js"
   ]
 }

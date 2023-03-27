@@ -1,0 +1,163 @@
+.delivery {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+	height: max-content;
+
+	padding: 50px 0 0 0;
+}
+
+.delivery__line {
+	width: 100%;
+	height: 40px;
+	background-color: #FCD127;
+}
+
+.delivery__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 0 15px 50px 15px;
+
+	background-image: url(../../images/delivery-background.svg);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.delivery__title-orange {
+	color: orange;
+	max-width: 1110px;
+	width: 100%;
+	margin: 25px 0 50px 0;
+	padding: 0;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: 33px;
+	line-height: 142.19%;
+}
+
+.delivery__title-black {
+	color: #2d2d2d;
+}
+
+.delivery__form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	margin: 0 0 30px 0;
+
+	max-width: 1110px;
+	width: 100%;
+}
+
+.delivery__form-name,
+.delivery__form-tel,
+.delivery__form-submit,
+.delivery__form-submit-disabled {
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+
+	width: 300px;
+	height: 50px;
+}
+
+.delivery__form-name {
+	padding: 0 0 0 10px;
+}
+
+.delivery__form-tel {
+	padding: 0 0 0 10px;
+}
+
+.delivery__form-name {
+	padding: 0 0 0 10px;
+}
+
+.delivery__form-name:focus,
+.delivery__form-tel:focus {
+
+	border: 1px solid #ffbf1d;
+}
+
+
+.delivery__form-submit-disabled {
+	color: #2d2d2d;
+	border: none;
+	background-color: white;
+}
+
+.delivery__form-submit {
+	border: none;
+	background-color: #ffbf1d;
+	cursor: pointer;
+}
+
+.delivery__form-submit:hover {
+	background-color: #FF971D;
+}
+
+.delivery__checkbox-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	max-width: 1110px;
+	width: 100%;
+}
+
+
+.delivery__checkbox {
+	margin: auto 15px auto 0;
+
+	min-width: 20px;
+	height: 20px;
+}
+
+.delivery__checkbox:checked {
+	background-color: #FCD127;
+}
+
+
+.delivery__label {
+	margin: 0;
+	max-width: 450px;
+	height: max-content;
+}
+
+@media screen and (max-width:768px) {
+	.delivery__form {
+		flex-direction: column;
+		height: max-content;
+		width: max-content;
+		gap: 10px;
+	}
+
+	.delivery__checkbox-container {
+		max-width: 300px;
+	}
+
+	.delivery__label {
+		font-style: normal;
+		font-weight: 300;
+		font-size: 11px;
+		line-height: 120%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.delivery__title-orange {
+		font-size: 32px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.delivery__title-orange {
+		font-size: 23px;
+	}
+}

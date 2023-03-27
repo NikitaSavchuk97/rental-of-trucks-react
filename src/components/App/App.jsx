@@ -14,6 +14,7 @@ import Reliable from '../Reliable/Reliable';
 import Catalog from '../Catalog/Catalog';
 import Realized from '../Realized/Realized';
 import Price from '../Price/Price';
+import Delivery from '../Delivery/Delivery';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
 								<Realized />
 								<Catalog />
 								<Price />
+								<Delivery />
 							</>
 						}
 					/>

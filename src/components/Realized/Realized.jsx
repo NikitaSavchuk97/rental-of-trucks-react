@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import './Realized.css';
-
+import realizedLogo from '../../images/realized-logo.svg';
 import realizedPhoto1 from '../../images/realized-photo-1.jpg'
 import realizedPhoto2 from '../../images/realized-photo-2.jpg'
 import realizedPhoto3 from '../../images/realized-photo-3.jpg'
@@ -92,7 +92,10 @@ function Realized() {
 
 	return (
 		<section className='realized'>
-			<h2 className='realized__title'>Реализованные проекты</h2>
+			<div className='realized__title-container'>
+				<h2 className='realized__title'>Реализованные проекты</h2>
+			</div>
+
 
 			<div className='realized__preview' >
 				<div className='realized__preview-wrapper'>
@@ -139,6 +142,8 @@ function Realized() {
 					}
 				</div>
 			</div>
+
+			<img className='realized__banner' src={realizedLogo} alt="" />
 
 		</section >
 	)

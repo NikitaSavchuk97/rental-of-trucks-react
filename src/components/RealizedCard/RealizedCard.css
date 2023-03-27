@@ -11,10 +11,9 @@
 }
 
 .realized-card__image {
-	max-width: 788px;
-	max-height: 582px;
-	width: 100%;
-	height: 100%;
+	width: 788px;
+	height: 582px;
+
 	object-fit: cover;
 }
 

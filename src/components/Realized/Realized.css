@@ -1,16 +1,22 @@
 .realized {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
 
-	padding: 0 0 50px 0;
+.realized__title-container {
+	margin: 30px 0 0 0;
+	padding: 0 15px;
 }
 
 .realized__title {
 	max-width: 1110px;
+	width: 100%;
 
 	color: #2d2d2d;
 
 	margin: 0 auto 20px auto;
-	padding: 0 15px;
 
 	font-style: normal;
 	font-weight: 600;
@@ -115,6 +121,9 @@
 	transition: all 0.5s ease-in-out;
 }
 
+.realized__banner {
+	margin: -40px 0 0 auto;
+}
 
 
 @media screen and (max-width: 768px) {}

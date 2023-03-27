@@ -13,6 +13,7 @@ import Crane from '../Crane/Crane';
 import Reliable from '../Reliable/Reliable';
 import Catalog from '../Catalog/Catalog';
 import Realized from '../Realized/Realized';
+import Price from '../Price/Price';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
 								<Reliable />
 								<Realized />
 								<Catalog />
+								<Price />
 							</>
 						}
 					/>

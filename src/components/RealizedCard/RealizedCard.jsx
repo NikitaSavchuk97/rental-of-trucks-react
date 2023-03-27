@@ -3,6 +3,7 @@ import './RealizedCard.css';
 
 import logoSpot from '../../images/logo-spot.svg';
 
+
 function RealizedCard(props) {
 	return (
 		<div className='realized-card'>
@@ -27,6 +28,7 @@ function RealizedCard(props) {
 
 				<a className='realized-card__link' href={props.card.link}>Подробнее</a>
 			</div>
+
 		</div >
 	)
 }

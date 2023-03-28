@@ -27,7 +27,11 @@ function Services() {
 				{
 					trucks.map((card) => {
 						return (
-							<a className='services__card-link-wrapper' href={card.link}>
+							<a
+								className='services__card-link-wrapper'
+								href={card.link}
+								key={card.id}
+							>
 								<img className='services__card' src={card.image} alt={card.nameRU} />
 							</a>
 						)

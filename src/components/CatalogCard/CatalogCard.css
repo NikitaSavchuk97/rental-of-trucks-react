@@ -14,7 +14,7 @@
 	width: 100%;
 	max-height: 590px;
 
-	box-shadow: 0 0 5px;
+	box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
 	background-color: #ffffff;
 
 	list-style-type: none;

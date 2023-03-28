@@ -16,6 +16,7 @@ import Realized from '../Realized/Realized';
 import Price from '../Price/Price';
 import Delivery from '../Delivery/Delivery';
 import About from '../About/About';
+import Services from '../Services/Services';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
 								<Price />
 								<Delivery />
 								<About />
+								<Services />
 							</main>
 						}
 					/>

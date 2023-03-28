@@ -4,9 +4,10 @@ import './About.css';
 function About() {
 	return (
 		<section className='about'>
+
 			<div className='about__container'>
-				<div className='about__text'>
-					<h2 className='about__us'>О нас</h2>
+				<h2 className='about__us'>О нас</h2>
+				<div className='about__content'>
 					<p className='about__paragraph'>
 						Компания ЕвроКран – это команда специалистов,
 						обеспечивающих эффективное использование высокопроизводительных немецких автокранов марки LIEBHERR.<br /><br />
@@ -16,10 +17,12 @@ function About() {
 						Поэтому мы можем подать любую технику в любую точку города незамедлительно,
 						что бывает весьма кстати в случае возникновения каких-либо непредвиденных ситуаций.<br /><br />
 					</p>
-				</div>
-				<iframe width="760" height="425" src="https://www.youtube.com/embed/kfm0b0k12b0?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
+					<iframe className='about__iframe' width='100%' height='100%' src="https://www.youtube.com/embed/kfm0b0k12b0?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+				</div>
 			</div>
+			
 		</section >
 	)
 }

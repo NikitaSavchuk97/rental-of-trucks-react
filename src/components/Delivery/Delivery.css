@@ -160,4 +160,11 @@
 	.delivery__title-orange {
 		font-size: 23px;
 	}
+
+	.delivery__form-name,
+	.delivery__form-tel,
+	.delivery__form-submit,
+	.delivery__form-submit-disabled {
+		width: 250px;
+	}
 }

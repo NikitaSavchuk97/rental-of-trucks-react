@@ -17,6 +17,7 @@ import Price from '../Price/Price';
 import Delivery from '../Delivery/Delivery';
 import About from '../About/About';
 import Services from '../Services/Services';
+import Text from '../Text/Text';
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
 								<Delivery />
 								<About />
 								<Services />
+								<Text />
 							</main>
 						}
 					/>

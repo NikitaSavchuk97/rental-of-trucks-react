@@ -18,6 +18,8 @@ import Delivery from '../Delivery/Delivery';
 import About from '../About/About';
 import Services from '../Services/Services';
 import Text from '../Text/Text';
+import Questions from '../Questions/Questions';
+import Map from '../Map/Map';
 
 function App() {
 
@@ -47,6 +49,8 @@ function App() {
 								<About />
 								<Services />
 								<Text />
+								<Questions />
+								<Map />
 							</main>
 						}
 					/>

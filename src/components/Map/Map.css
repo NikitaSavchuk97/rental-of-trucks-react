@@ -1,0 +1,27 @@
+.map {
+	width: 100%;
+	height: 500px;
+}
+
+.map__childer {
+	position: relative;
+	overflow: hidden;
+}
+
+.map__childer-link {
+	width: 100%;
+	height: 500px;
+
+	position: relative;
+}
+
+@media screen and (max-width: 550px) {
+	.map {
+		height: 300px;
+	}
+
+	.map__childer-link {
+		height: 300px;
+	}
+
+}

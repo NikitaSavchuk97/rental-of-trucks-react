@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Location, useLocation } from "react-router-dom";
 
 import './App.css';
 
@@ -20,9 +20,10 @@ import Services from '../Services/Services';
 import Text from '../Text/Text';
 import Questions from '../Questions/Questions';
 import Map from '../Map/Map';
+import CatalogMain from '../CatalogMain/CatalogMain';
 
 function App() {
-
+	const { pathname } = useLocation()
 	const [currentUser, setCurrentUser] = useState({});
 
 	return (
@@ -51,6 +52,17 @@ function App() {
 								<Text />
 								<Questions />
 								<Map />
+							</main>
+						}
+					/>
+
+					<Route
+						path='/catalog/*'
+						element={
+							<main className='main'>
+								<CatalogMain
+									location={pathname}
+								/>
 							</main>
 						}
 					/>

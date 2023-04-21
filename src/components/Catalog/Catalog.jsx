@@ -2,31 +2,13 @@ import { useEffect, useState } from 'react';
 
 import './Catalog.css';
 
-import catalogPhoto1 from '../../images/catalog-photo-1.jpg';
-import catalogPhoto2 from '../../images/catalog-photo-2.jpg';
-import catalogPhoto3 from '../../images/catalog-photo-3.jpg';
-import catalogPhoto4 from '../../images/catalog-photo-4.jpg';
-import catalogPhoto5 from '../../images/catalog-photo-5.jpg';
-import catalogPhoto6 from '../../images/catalog-photo-6.jpg';
-import catalogPhoto7 from '../../images/catalog-photo-7.jpg';
-import catalogPhoto8 from '../../images/catalog-photo-8.jpg';
-
+import { trucksCatalog } from '../../trucks/trucks'
 import CatalogCard from '../CatalogCard/CatalogCard';
 import SliderArrows from '../SliderArrows/SliderArrows';
 
 function Catalog() {
 
-	const trucks = [
-		{ id: 0, image: catalogPhoto1, nameRU: 'Экскаватор', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-		{ id: 1, image: catalogPhoto2, nameRU: 'Бульдозер', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-		{ id: 2, image: catalogPhoto3, nameRU: 'Самосвал', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-		{ id: 3, image: catalogPhoto4, nameRU: 'Погрузчик', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-		{ id: 4, image: catalogPhoto5, nameRU: 'Грейдер', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-		{ id: 5, image: catalogPhoto7, nameRU: 'Трубокладчик', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-		{ id: 6, image: catalogPhoto6, nameRU: 'Автокран', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-		{ id: 7, image: catalogPhoto8, nameRU: 'Перегружатель', loadCapacity: 5, craneLength: 1, link: '/excavator' },
-	]
-
+	const trucks = trucksCatalog;
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [indexForPrev, setIndexForPrev] = useState(0);

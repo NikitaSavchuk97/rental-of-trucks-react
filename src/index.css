@@ -1,15 +1,15 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts.css);
+
+
 html {
 	scroll-behavior: smooth;
 }
 
 
-
-@import url(./vendor/normalize.css);
-@import url(./vendor/fonts.css);
-
-
-
-
+html::-webkit-scrollbar {
+	display: none;
+}
 
 body {
 	margin: 0;

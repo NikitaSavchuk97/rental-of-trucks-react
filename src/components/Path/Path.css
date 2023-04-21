@@ -1,0 +1,33 @@
+.path {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 80px;
+
+	padding: 0 15px;
+}
+
+.path__page-path {
+	display: flex;
+	flex-direction: row;
+
+	max-width: 1110px;
+	width: 100%;
+
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 156.69%;
+}
+
+.path__to-main {
+	text-decoration: none;
+	color: #2d2d2d;
+}
+
+.path__this-path {
+	margin: 0 0 0 4px;
+	color: #898989;
+}

@@ -2,21 +2,13 @@ import { useState } from 'react';
 
 import './Crane.css';
 
-import cranePhoto1 from '../../images/crane-photo-1.jpg'
-import cranePhoto2 from '../../images/crane-photo-2.jpg'
-import cranePhoto3 from '../../images/crane-photo-3.jpg'
-
 import SliderArrows from '../SliderArrows/SliderArrows';
 import CraneCard from '../CraneCard/CraneCard';
+import { trucksCrane } from '../../trucks/trucks';
 
 function Crane() {
 
-	const trucks = [
-		{ id: 0, image: cranePhoto1, nameRU: 'Гусиничный кран', about: 'Аренда гусеничного крана – актуальная услуга для многих строительных площадок. Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.', link: '/excavator' },
-		{ id: 1, image: cranePhoto2, nameRU: 'Автомбильный кран', about: 'Аренда гусеничного крана – актуальная услуга для многих строительных площадок. Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.', link: '/excavator' },
-		{ id: 2, image: cranePhoto3, nameRU: 'Фронтальный погрузчик', about: 'Аренда гусеничного крана – актуальная услуга для многих строительных площадок. Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.', link: '/excavator' },
-	]
-
+	const trucks = trucksCrane;
 	const [currentIndex, setCurrentIndex] = useState(0)
 
 	const next = () => {

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rental-of-trucks-react/static/css/main.71176d7a.css",
-    "main.js": "/rental-of-trucks-react/static/js/main.89c9f32e.js",
+    "main.js": "/rental-of-trucks-react/static/js/main.ab42e601.js",
     "static/media/realized-photo-1.jpg": "/rental-of-trucks-react/static/media/realized-photo-1.23b57f6fc935936e8ff7.jpg",
     "static/media/catalog-photo-7.jpg": "/rental-of-trucks-react/static/media/catalog-photo-7.edf70efcefc8f2288b68.jpg",
     "static/media/catalog-photo-4.jpg": "/rental-of-trucks-react/static/media/catalog-photo-4.e51b94df13091387510f.jpg",
@@ -72,10 +72,10 @@
     "static/media/logo-burger-open.svg": "/rental-of-trucks-react/static/media/logo-burger-open.5f7a8ae44afadbe9f09b1bd2f9b078a0.svg",
     "static/media/text-list-image.svg": "/rental-of-trucks-react/static/media/text-list-image.3d515a2b7830f906a42c.svg",
     "main.71176d7a.css.map": "/rental-of-trucks-react/static/css/main.71176d7a.css.map",
-    "main.89c9f32e.js.map": "/rental-of-trucks-react/static/js/main.89c9f32e.js.map"
+    "main.ab42e601.js.map": "/rental-of-trucks-react/static/js/main.ab42e601.js.map"
   },
   "entrypoints": [
     "static/css/main.71176d7a.css",
-    "static/js/main.89c9f32e.js"
+    "static/js/main.ab42e601.js"
   ]
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Delivery.css';
 
-function Delivery() {
+function Delivery(props) {
 
 	const [checkbox, setCheckbox] = useState(false);
 
@@ -21,7 +21,7 @@ function Delivery() {
 			<div className='delivery__line'></div>
 
 			<div className='delivery__container'>
-				<h2 className='delivery__title-orange'>Оперативно <span className='delivery__title-orange delivery__title-black'>поставим технику</span></h2>
+				<h2 className='delivery__title-orange'>{props.phraseY} <span className='delivery__title-orange delivery__title-black'>{props.phraseW}</span></h2>
 				<form className='delivery__form' onSubmit={handleSubmit}>
 					<input className='delivery__form-name' type="text" placeholder='Ваше имя' />
 					<input className='delivery__form-tel' type="tel" placeholder='Ваш телефон' />

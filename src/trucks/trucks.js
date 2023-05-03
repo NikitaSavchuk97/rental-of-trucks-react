@@ -98,8 +98,8 @@ export const trucksCatalog = [
 	{ id: 3, image: catalogPhoto8, type: 'automobileCrane', nameRU: 'LTM 1400', loadCapacity: 400, departureArrow: 80, liftingHeight: 72, link: '/excavator' },
 	{ id: 4, image: catalogPhoto4, type: 'crawlerCrane', nameRU: 'LR 1300', loadCapacity: 300, departureArrow: 90, liftingHeight: 83, link: '/excavator' },
 	{ id: 5, image: catalogPhoto5, type: 'crawlerCrane', nameRU: 'LR 1750', loadCapacity: 750, departureArrow: 140, liftingHeight: 128, link: '/excavator' },
-	{ id: 6, image: catalogPhoto6, type: 'lowFrameTrawl', nameRU: 'NOOTEBOOM OVB 102 06', loadCapacity: 131, link: '/excavator' },
-	{ id: 7, image: catalogPhoto7, type: 'lowFrameTrawl', nameRU: 'ES-GE Esge 5 VON-25-50.4.H13', loadCapacity: 82, link: '/excavator' },
+	{ id: 6, image: catalogPhoto6, type: 'lowFrameTrawl', nameRU: 'NOOTEBOOM OVB', loadCapacity: 131, link: '/excavator' },
+	{ id: 7, image: catalogPhoto7, type: 'lowFrameTrawl', nameRU: 'ES-GE Esge 5', loadCapacity: 82, link: '/excavator' },
 ]
 
 export const trucksServices = [

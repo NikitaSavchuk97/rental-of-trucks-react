@@ -11,7 +11,9 @@ function Header() {
 
 				<div className='header__logo'>
 
-					<img className='header__logo-image' src={logo} alt="логотип главный" />
+					<a className='header__logo-image' href="/">
+						<img src={logo} alt="логотип главный" />
+					</a>
 					<p className='header__logo-title'>
 						Аренда спецтехники<br />LIEBHERR c 2000 года
 					</p>

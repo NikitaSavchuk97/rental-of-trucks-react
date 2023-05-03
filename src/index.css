@@ -6,7 +6,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-
 html::-webkit-scrollbar {
 	display: none;
 }
@@ -24,3 +23,12 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+
+
+/*
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+*/

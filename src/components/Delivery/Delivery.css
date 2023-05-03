@@ -163,7 +163,8 @@
 	.delivery__form-name,
 	.delivery__form-tel,
 	.delivery__form-submit,
-	.delivery__form-submit-disabled {
+	.delivery__form-submit-disabled,
+	.delivery__checkbox-container {
 		width: 250px;
 	}
 }

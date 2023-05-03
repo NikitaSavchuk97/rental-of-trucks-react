@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, Location, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import './App.css';
 
@@ -37,7 +37,7 @@ function App() {
 
 					<Route
 						exact
-						path='/*'
+						path='/'
 						element={
 							<main className='main'>
 								<Banner />
@@ -46,7 +46,10 @@ function App() {
 								<Realized />
 								<Catalog />
 								<Price />
-								<Delivery />
+								<Delivery
+									phraseY={'Оперативно'}
+									phraseW={'поставим технику'}
+								/>
 								<About />
 								<Services />
 								<Text />
@@ -57,7 +60,7 @@ function App() {
 					/>
 
 					<Route
-						path='/catalog/*'
+						path='/catalog'
 						element={
 							<main className='main'>
 								<CatalogMain

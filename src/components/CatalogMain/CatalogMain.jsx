@@ -2,10 +2,13 @@ import './CatalogMain.css';
 
 import Path from '../Path/Path';
 import CatalogCard from '../CatalogCard/CatalogCard';
+import Delivery from '../Delivery/Delivery'
 
 import { useEffect, useState } from 'react';
 import { RangeSlider } from "react-double-range-slider";
 import { trucksCatalog } from '../../trucks/trucks';
+
+import catalogMainFilter from '../../images/catalog-main-filter.svg'
 
 function CatalogMain(props) {
 
@@ -16,9 +19,11 @@ function CatalogMain(props) {
 	const [mobileCraneMenu, setMobileCraneMenu] = useState(false);
 	const [crawlerСraneMenu, setСrawlerСraneMenu] = useState(false);
 	const [lowFrameTrawlMenu, setLowFrameTrawlMenu] = useState(false);
+	const [openMobileFiltres, setOpenMobileFiltres] = useState('nope');
 	const [loadCapacityValue, setLoadCapacityValue] = useState({ min: 40, max: 750 });
 	const [liftingHeightValue, setLiftingHeightValue] = useState({ min: 3, max: 130 });
 	const [departureArrowValue, setDepartureArrowValue] = useState({ min: 35, max: 140 });
+
 
 	useEffect(() => {
 		if (mobileCrane) {
@@ -50,6 +55,119 @@ function CatalogMain(props) {
 				&&
 				(item.loadCapacity >= loadCapacityValue.min && item.loadCapacity <= loadCapacityValue.max)
 			));
+		} else if ((loadCapacityValue.min > 40 || loadCapacityValue.max < 750) || (liftingHeightValue.min > 3 || liftingHeightValue.max < 130) || (departureArrowValue.min > 35 || departureArrowValue.max < 140)) {
+
+			let result = [];
+
+			if (loadCapacityValue.min > 40 || loadCapacityValue.max < 750) {
+				console.log('вес')
+				if (result.length === 0) {
+					trucksCatalog.forEach((truck) => {
+						if (result.length !== 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							if (result.some(truckItem => truckItem === truck)) {
+								return
+							} else {
+								result.push(truck)
+							}
+						}
+
+						if (result.length === 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							result.push(truck)
+						}
+					})
+				} else {
+					result.forEach((truck) => {
+						if (result.length !== 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							if (result.some(truckItem => truckItem === truck)) {
+								return
+							} else {
+								result.push(truck)
+							}
+						}
+
+						if (result.length === 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							result.push(truck)
+						}
+					})
+				}
+
+			}
+
+
+
+			if (liftingHeightValue.min > 3 || liftingHeightValue.max < 130) {
+				console.log('высота')
+				console.log(result.length)
+
+				if (result.length === 0) {
+					trucksCatalog.forEach((truck) => {
+						if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+							if (result.some(truckItem => truckItem === truck)) {
+								console.log('1 высота осн')
+							} else {
+								result.push(truck)
+							}
+						}
+
+						if (result.length === 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+							console.log('2 высота осн')
+							result.push(truck)
+						}
+					})
+				}
+			} else {
+				result.forEach((truck) => {
+					if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+						if (result.some(truckItem => truckItem === truck)) {
+							console.log('1 высота рез')
+							console.log(result.some(truckItem => truckItem === truck))
+						} else {
+							result.push(truck)
+						}
+					}
+
+
+
+					if (result.length === 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+						console.log('2 высота рез')
+						result.pop(truck)
+					}
+					if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+						console.log('12345')
+						result.push(truck)
+					}
+
+				})
+			}
+
+
+
+			/*
+						if (departureArrowValue.min > 35 || departureArrowValue.max < 140) {
+							console.log('стрела')
+							trucksCatalog.forEach((truck) => {
+			
+								if (result.length !== 0) {
+									if (result.some(truckItem => truckItem === truck)) {
+										return
+									}
+								}
+			
+								if (truck.departureArrow >= departureArrowValue.min && truck.departureArrow <= departureArrowValue.max) {
+									result.push(truck)
+								}
+							})
+						}
+						
+						if (result.some(truckItem => truckItem === truck)) {
+							return
+						} else {
+							result.push(truck)
+						}
+						*/
+
+			setTrucks(result)
+
 		} else {
 			console.log('все')
 			setTrucks(trucksCatalog);
@@ -109,6 +227,131 @@ function CatalogMain(props) {
 		}
 	}
 
+	function handleOpenMobileFiltres() {
+		if (openMobileFiltres === 'nope') {
+			setOpenMobileFiltres('yep');
+		} else {
+			setOpenMobileFiltres('nope');
+		}
+	}
+
+	function handleReturnFiltres(value) {
+		if (value === 'yep') {
+			return (
+				<div className='catalog-main__filtres-main-box'>
+					<h2 className='catalog-main__filtres-main-title'>Параметры</h2>
+
+					<div className='catalog-main__filtres-container'>
+
+						<h3 className='catalog-main__filtres-title'>Вид техники</h3>
+
+						<ul className='catalog-main__filtres-ul'>
+							<li className='catalog-main__filtres-li'>
+								<input className='catalog-main__filtres-checkbox' type="checkbox" checked={mobileCrane} onChange={handleChangeCheckbox} name="MC" />
+								<label className='catalog-main__filtres-label' >Мобильные краны</label>
+							</li>
+
+							<li className='catalog-main__filtres-li'>
+								<input className='catalog-main__filtres-checkbox' type="checkbox" checked={crawlerСrane} onChange={handleChangeCheckbox} name="GC" />
+								<label className='catalog-main__filtres-label' >Гусеничные краны</label>
+							</li>
+
+							<li className='catalog-main__filtres-li'>
+								<input className='catalog-main__filtres-checkbox' type="checkbox" checked={lowFrameTrawl} onChange={handleChangeCheckbox} name="LT" />
+								<label className='catalog-main__filtres-label' >Низкорамные тралы</label>
+							</li>
+						</ul>
+
+						<div className='catalog-main__filtres-content'>
+							<h3 className='catalog-main__filtres-title'>Грузоподъемность, т.</h3>
+
+							<div className='catalog-main__filtres-subcontainer'>
+								<form className='catalog-main__filtres-amount-min' >
+									<input className='catalog-main__filtres-input' value={loadCapacityValue.min} onChange={handleChangeValue} name='LCVmin' type="number" />
+								</form>
+
+								<div className='catalog-main__filtres-amount-max'>
+									<input className='catalog-main__filtres-input' value={loadCapacityValue.max} onChange={handleChangeValue} name='LCVmax' type="number" />
+								</div>
+							</div>
+
+							<RangeSlider
+								value={{ min: 40, max: 750 }}
+								onChange={(e) => {
+									setLoadCapacityValue({
+										min: e.min,
+										max: e.max
+									});
+								}}
+								tooltipVisibility="hover"
+							/>
+
+						</div>
+
+						<div className='catalog-main__filtres-content'>
+							<h3 className='catalog-main__filtres-title'>Вылет стрелы, м.</h3>
+
+							<div className='catalog-main__filtres-subcontainer'>
+								<form className='catalog-main__filtres-amount-min' >
+									<input className='catalog-main__filtres-input' value={departureArrowValue.min} onChange={handleChangeValue} name='LHVmin' type="number" />
+								</form>
+
+								<div className='catalog-main__filtres-amount-max'>
+									<input className='catalog-main__filtres-input' value={departureArrowValue.max} onChange={handleChangeValue} name='LHVmax' type="number" />
+								</div>
+							</div>
+
+							<RangeSlider
+								value={{ min: 35, max: 140 }}
+								onChange={(e) => {
+									setDepartureArrowValue({
+										min: e.min,
+										max: e.max
+									});
+								}}
+								tooltipVisibility="hover"
+							/>
+
+						</div>
+
+						<div className='catalog-main__filtres-content'>
+							<h3 className='catalog-main__filtres-title'>Высота подъема, м.</h3>
+
+							<div className='catalog-main__filtres-subcontainer'>
+								<form className='catalog-main__filtres-amount-min' >
+									<input className='catalog-main__filtres-input' value={liftingHeightValue.min} onChange={handleChangeValue} name='LHVmin' type="number" />
+								</form>
+
+								<div className='catalog-main__filtres-amount-max'>
+									<input className='catalog-main__filtres-input' value={liftingHeightValue.max} onChange={handleChangeValue} name='LHVmax' type="number" />
+								</div>
+							</div>
+
+							<RangeSlider
+								value={{ min: 3 || liftingHeightValue.min, max: 135 || liftingHeightValue.max }}
+								onChange={(e) => {
+									setLiftingHeightValue({
+										min: e.min,
+										max: e.max
+									});
+								}}
+								tooltipVisibility="hover"
+							/>
+
+						</div>
+
+						<button className='catalog-main__filtres-clear' onClick={handleResetFiltres}>
+							Очистить фильтры
+						</button>
+					</div>
+
+				</div>
+			)
+		} else {
+			return
+		}
+	}
+
 	return (
 		<section className='catalog-main'>
 			<Path
@@ -129,117 +372,21 @@ function CatalogMain(props) {
 					</button>
 				</div>
 
+				<div className='catalog-main__card-filtres-mobile'>
+					<button className='catalog-main__card-filtres-mobile-btn' onClick={handleOpenMobileFiltres}>
+						<img src={catalogMainFilter} alt="" />
+					</button>
+					{
+						handleReturnFiltres(openMobileFiltres)
+					}
+				</div>
+
 				<div className='catalog-main__filtres-and-content'>
 					<div className='catalog-main__filtres'>
 
-						<div className='catalog-main__filtres-main-box'>
-							<h2 className='catalog-main__filtres-main-title'>Параметры</h2>
-
-							<div className='catalog-main__filtres-container'>
-
-								<h3 className='catalog-main__filtres-title'>Вид техники</h3>
-
-								<ul className='catalog-main__filtres-ul'>
-									<li className='catalog-main__filtres-li'>
-										<input className='catalog-main__filtres-checkbox' type="checkbox" checked={mobileCrane} onChange={handleChangeCheckbox} name="MC" />
-										<label className='catalog-main__filtres-label' >Мобильные краны</label>
-									</li>
-
-									<li className='catalog-main__filtres-li'>
-										<input className='catalog-main__filtres-checkbox' type="checkbox" checked={crawlerСrane} onChange={handleChangeCheckbox} name="GC" />
-										<label className='catalog-main__filtres-label' >Гусеничные краны</label>
-									</li>
-
-									<li className='catalog-main__filtres-li'>
-										<input className='catalog-main__filtres-checkbox' type="checkbox" checked={lowFrameTrawl} onChange={handleChangeCheckbox} name="LT" />
-										<label className='catalog-main__filtres-label' >Низкорамные тралы</label>
-									</li>
-								</ul>
-
-								<div className='catalog-main__filtres-content'>
-									<h3 className='catalog-main__filtres-title'>Грузоподъемность, т.</h3>
-
-									<div className='catalog-main__filtres-subcontainer'>
-										<form className='catalog-main__filtres-amount-min' >
-											<input className='catalog-main__filtres-input' value={loadCapacityValue.min} onChange={handleChangeValue} name='LCVmin' type="number" />
-										</form>
-
-										<div className='catalog-main__filtres-amount-max'>
-											<input className='catalog-main__filtres-input' value={loadCapacityValue.max} onChange={handleChangeValue} name='LCVmax' type="number" />
-										</div>
-									</div>
-
-									<RangeSlider
-										value={{ min: 40, max: 750 }}
-										onChange={(e) => {
-											setLoadCapacityValue({
-												min: e.min,
-												max: e.max
-											});
-										}}
-										tooltipVisibility="hover"
-									/>
-
-								</div>
-
-								<div className='catalog-main__filtres-content'>
-									<h3 className='catalog-main__filtres-title'>Вылет стрелы, м.</h3>
-
-									<div className='catalog-main__filtres-subcontainer'>
-										<form className='catalog-main__filtres-amount-min' >
-											<input className='catalog-main__filtres-input' value={departureArrowValue.min} onChange={handleChangeValue} name='LHVmin' type="number" />
-										</form>
-
-										<div className='catalog-main__filtres-amount-max'>
-											<input className='catalog-main__filtres-input' value={departureArrowValue.max} onChange={handleChangeValue} name='LHVmax' type="number" />
-										</div>
-									</div>
-
-									<RangeSlider
-										value={{ min: 35, max: 140 }}
-										onChange={(e) => {
-											setDepartureArrowValue({
-												min: e.min,
-												max: e.max
-											});
-										}}
-										tooltipVisibility="hover"
-									/>
-
-								</div>
-
-								<div className='catalog-main__filtres-content'>
-									<h3 className='catalog-main__filtres-title'>Высота подъема, м.</h3>
-
-									<div className='catalog-main__filtres-subcontainer'>
-										<form className='catalog-main__filtres-amount-min' >
-											<input className='catalog-main__filtres-input' value={liftingHeightValue.min} onChange={handleChangeValue} name='LHVmin' type="number" />
-										</form>
-
-										<div className='catalog-main__filtres-amount-max'>
-											<input className='catalog-main__filtres-input' value={liftingHeightValue.max} onChange={handleChangeValue} name='LHVmax' type="number" />
-										</div>
-									</div>
-
-									<RangeSlider
-										value={{ min: 3 || liftingHeightValue.min, max: 135 || liftingHeightValue.max }}
-										onChange={(e) => {
-											setLiftingHeightValue({
-												min: e.min,
-												max: e.max
-											});
-										}}
-										tooltipVisibility="hover"
-									/>
-
-								</div>
-
-								<button className='catalog-main__filtres-clear' onClick={handleResetFiltres}>
-									Очистить фильтры
-								</button>
-							</div>
-
-						</div>
+						{
+							handleReturnFiltres('yep')
+						}
 
 						<div className='catalog-main__filtres-main-box'>
 							<h2 className='catalog-main__filtres-main-title'>Парк техники</h2>
@@ -248,52 +395,49 @@ function CatalogMain(props) {
 								<ul className='catalog-main__filtres-list'>
 									<li className='catalog-main__filtres-item'>
 										<button className='catalog-main__filtres-li-button' onClick={handleOpenList}>
-											<h2 className='catalog-main__filtres-li-title' id='MC'> Мобильные краны Liebherr LTM</h2>
+											<h2 className='catalog-main__filtres-li-title' id='MC'> Мобильные краны <br />Liebherr LTM</h2>
 											<h2 className='catalog-main__filtres-li-plus-minus' id='MC'>{mobileCraneMenu ? '-' : '+'}</h2>
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${mobileCraneMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
+											{
+												trucksCatalog.filter((item) => item.type === 'automobileCrane').map((truck) => {
+													return (
+														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
+													)
+												})
+											}
 										</ul>
 									</li>
 
 									<li className='catalog-main__filtres-item'>
 										<button className='catalog-main__filtres-li-button' onClick={handleOpenList} name='CC'>
-											<h2 className='catalog-main__filtres-li-title' id='CC'> Гусеничные краны Liebherr LR</h2>
+											<h2 className='catalog-main__filtres-li-title' id='CC'>Гусеничные краны <br />Liebherr LR</h2>
 											<h2 className='catalog-main__filtres-li-plus-minus' id='CC'>{crawlerСraneMenu ? '-' : '+'}</h2>
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${crawlerСraneMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
+											{
+												trucksCatalog.filter((item) => item.type === 'crawlerCrane').map((truck) => {
+													return (
+														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
+													)
+												})
+											}
 										</ul>
 									</li>
 
 									<li className='catalog-main__filtres-item'>
 										<button className='catalog-main__filtres-li-button' onClick={handleOpenList} name='LT'>
-											<h2 className='catalog-main__filtres-li-title' id='LT'>  Низкорамные тралы Liebherr LT</h2>
+											<h2 className='catalog-main__filtres-li-title' id='LT'>Низкорамные тралы</h2>
 											<h2 className='catalog-main__filtres-li-plus-minus' id='LT'>{lowFrameTrawlMenu ? '-' : '+'}</h2>
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${lowFrameTrawlMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
-											<li className='catalog-main__filtres-sub-item'><a className='catalog-main__filtres-sub-item-link' href="/">LTM 1040 (40 т.)</a></li>
+											{
+												trucksCatalog.filter((item) => item.type === 'lowFrameTrawl').map((truck) => {
+													return (
+														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
+													)
+												})
+											}
 										</ul>
 									</li>
 								</ul>
@@ -339,6 +483,12 @@ function CatalogMain(props) {
 
 				</div>
 			</div>
+
+			<Delivery
+				phraseY={'Нужна помощь в'}
+				phraseW={'подборе?'}
+			/>
+
 		</section >
 	)
 }

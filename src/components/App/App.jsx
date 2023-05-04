@@ -37,9 +37,9 @@ function App() {
 
 					<Route
 						exact
-						path='/'
+						path='/*'
 						element={
-							<main className='main'>
+							<>
 								<Banner />
 								<Crane />
 								<Reliable />
@@ -55,18 +55,16 @@ function App() {
 								<Text />
 								<Questions />
 								<Map />
-							</main>
+							</>
 						}
 					/>
 
 					<Route
-						path='/catalog'
+						path='/catalog/*'
 						element={
-							<main className='main'>
-								<CatalogMain
-									location={pathname}
-								/>
-							</main>
+							<CatalogMain
+								location={pathname}
+							/>
 						}
 					/>
 

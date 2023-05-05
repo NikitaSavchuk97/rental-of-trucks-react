@@ -92,6 +92,11 @@
 	background-color: #FCB427;
 }
 
+
+.catalog-card__rent-button:hover {
+	background-color: #FF971D;
+}
+
 .catalog-card__givemesomethissmallcards {
 	max-width: 280px;
 	max-height: 550px;

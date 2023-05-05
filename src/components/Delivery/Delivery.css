@@ -87,12 +87,12 @@
 
 .delivery__form-submit-disabled {
 	color: #2d2d2d;
-	border: none;
-	background-color: white;
+
+	background-color: #c4c4c4;
 }
 
 .delivery__form-submit {
-	border: none;
+
 	background-color: #ffbf1d;
 	cursor: pointer;
 }

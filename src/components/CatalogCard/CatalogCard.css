@@ -23,12 +23,14 @@
 	margin: 0 15px 15px 15px;
 }
 
+.catalog-card__image-wrapper {}
+
 .catalog-card__image {
 	object-fit: cover;
-	height: 100%;
+
 	width: 100%;
 
-	height: 325px;
+	height: 290px;
 }
 
 .catalog-card__title {

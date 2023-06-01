@@ -6,7 +6,6 @@
 
 
 .catalog-main__content {
-	min-height: 2100px;
 	padding: 0 15px 50px 15px;
 
 	background-image: url(../../images/catalog-main-banner-1.svg), url(../../images/catalog-main-banner-2.svg);
@@ -31,13 +30,13 @@
 	display: grid;
 
 	max-width: 1110px;
+	width: 100%;
 
 	margin: 0 auto 50px auto;
 
-	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+	gap: 13px;
 
-	gap: 12px;
 }
 
 .catalog-main__filter-button {
@@ -48,7 +47,6 @@
 	margin: 0;
 	padding: 0;
 
-	width: 115px;
 	height: 35px;
 }
 
@@ -63,6 +61,7 @@
 	flex-direction: row;
 
 	max-width: 1152px;
+	min-height: 1700px;
 	width: 100%;
 
 
@@ -350,6 +349,7 @@
 .catalog-main__cards-container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: min-content;
 	gap: 20px 20px;
 
 	margin: 0 0 0 20px;

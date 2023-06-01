@@ -21,6 +21,8 @@ import Text from '../Text/Text';
 import Questions from '../Questions/Questions';
 import Map from '../Map/Map';
 import CatalogMain from '../CatalogMain/CatalogMain';
+import Product from '../Product/Product';
+import NotFound from '../NotFound/NotFound';
 
 function App() {
 	const { pathname } = useLocation()
@@ -31,20 +33,24 @@ function App() {
 			<div className='page'>
 
 				<Header />
-				<Navigation />
+				<Navigation
+					location={pathname}
+				/>
 
 				<Routes>
 
 					<Route
 						exact
-						path='/*'
+						path='/'
 						element={
 							<>
 								<Banner />
 								<Crane />
 								<Reliable />
 								<Realized />
-								<Catalog />
+								<Catalog
+									location={pathname}
+								/>
 								<Price />
 								<Delivery
 									phraseY={'Оперативно'}
@@ -60,13 +66,32 @@ function App() {
 					/>
 
 					<Route
-						path='/catalog/*'
+						path='catalog'
 						element={
 							<CatalogMain
 								location={pathname}
 							/>
 						}
 					/>
+
+					<Route
+						path='catalog/product/:id'
+						element={
+							<Product />
+						}
+					/>
+
+
+
+					<Route
+						path='*'
+						element={
+							<NotFound />
+						}
+					/>
+
+
+
 
 				</Routes>
 

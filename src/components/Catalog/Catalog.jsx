@@ -6,7 +6,7 @@ import { trucksCatalog } from '../../trucks/trucks'
 import CatalogCard from '../CatalogCard/CatalogCard';
 import SliderArrows from '../SliderArrows/SliderArrows';
 
-function Catalog() {
+function Catalog(props) {
 
 	const trucks = trucksCatalog;
 	const [currentIndex, setCurrentIndex] = useState(0)
@@ -71,6 +71,7 @@ function Catalog() {
 							trucks.map((card) => {
 								return (
 									<CatalogCard
+										pathname={props.location}
 										key={card.id}
 										card={card}
 									/>

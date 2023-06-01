@@ -22,12 +22,12 @@
 	line-height: 156.69%;
 }
 
-.path__to-main {
-	text-decoration: none;
-	color: #2d2d2d;
-}
-
 .path__this-path {
 	margin: 0 0 0 4px;
 	color: #898989;
+}
+
+.path__to-main {
+	text-decoration: none;
+	color: #2d2d2d;
 }

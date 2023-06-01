@@ -2,7 +2,8 @@ import './CatalogMain.css';
 
 import Path from '../Path/Path';
 import CatalogCard from '../CatalogCard/CatalogCard';
-import Delivery from '../Delivery/Delivery'
+import Delivery from '../Delivery/Delivery';
+import Map from '../Map/Map';
 
 import { useEffect, useState } from 'react';
 import { RangeSlider } from "react-double-range-slider";
@@ -12,7 +13,7 @@ import catalogMainFilter from '../../images/catalog-main-filter.svg'
 
 function CatalogMain(props) {
 
-	const [trucks, setTrucks] = useState(trucksCatalog)
+	const [trucks, setTrucks] = useState(trucksCatalog);
 	const [mobileCrane, setMobileCrane] = useState(false);
 	const [crawlerСrane, setСrawlerСrane] = useState(false);
 	const [lowFrameTrawl, setLowFrameTrawl] = useState(false);
@@ -55,123 +56,11 @@ function CatalogMain(props) {
 				&&
 				(item.loadCapacity >= loadCapacityValue.min && item.loadCapacity <= loadCapacityValue.max)
 			));
-		} else if ((loadCapacityValue.min > 40 || loadCapacityValue.max < 750) || (liftingHeightValue.min > 3 || liftingHeightValue.max < 130) || (departureArrowValue.min > 35 || departureArrowValue.max < 140)) {
-
-			let result = [];
-
-			if (loadCapacityValue.min > 40 || loadCapacityValue.max < 750) {
-				console.log('вес')
-				if (result.length === 0) {
-					trucksCatalog.forEach((truck) => {
-						if (result.length !== 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
-							if (result.some(truckItem => truckItem === truck)) {
-								return
-							} else {
-								result.push(truck)
-							}
-						}
-
-						if (result.length === 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
-							result.push(truck)
-						}
-					})
-				} else {
-					result.forEach((truck) => {
-						if (result.length !== 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
-							if (result.some(truckItem => truckItem === truck)) {
-								return
-							} else {
-								result.push(truck)
-							}
-						}
-
-						if (result.length === 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
-							result.push(truck)
-						}
-					})
-				}
-
-			}
-
-
-
-			if (liftingHeightValue.min > 3 || liftingHeightValue.max < 130) {
-				console.log('высота')
-				console.log(result.length)
-
-				if (result.length === 0) {
-					trucksCatalog.forEach((truck) => {
-						if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
-							if (result.some(truckItem => truckItem === truck)) {
-								console.log('1 высота осн')
-							} else {
-								result.push(truck)
-							}
-						}
-
-						if (result.length === 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
-							console.log('2 высота осн')
-							result.push(truck)
-						}
-					})
-				}
-			} else {
-				result.forEach((truck) => {
-					if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
-						if (result.some(truckItem => truckItem === truck)) {
-							console.log('1 высота рез')
-							console.log(result.some(truckItem => truckItem === truck))
-						} else {
-							result.push(truck)
-						}
-					}
-
-
-
-					if (result.length === 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
-						console.log('2 высота рез')
-						result.pop(truck)
-					}
-					if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
-						console.log('12345')
-						result.push(truck)
-					}
-
-				})
-			}
-
-
-
-			/*
-						if (departureArrowValue.min > 35 || departureArrowValue.max < 140) {
-							console.log('стрела')
-							trucksCatalog.forEach((truck) => {
-			
-								if (result.length !== 0) {
-									if (result.some(truckItem => truckItem === truck)) {
-										return
-									}
-								}
-			
-								if (truck.departureArrow >= departureArrowValue.min && truck.departureArrow <= departureArrowValue.max) {
-									result.push(truck)
-								}
-							})
-						}
-						
-						if (result.some(truckItem => truckItem === truck)) {
-							return
-						} else {
-							result.push(truck)
-						}
-						*/
-
-			setTrucks(result)
-
 		} else {
 			console.log('все')
 			setTrucks(trucksCatalog);
 		}
+
 	}, [mobileCrane, crawlerСrane, lowFrameTrawl, loadCapacityValue, liftingHeightValue, departureArrowValue])
 
 
@@ -186,6 +75,11 @@ function CatalogMain(props) {
 		setLoadCapacityValue({ min: 40, max: 750 })
 		setDepartureArrowValue({ min: 35, max: 140 })
 		setLiftingHeightValue({ min: 3, max: 130 })
+	}
+
+	function handleButtonFiltres(e) {
+		console.log(e.target.value)
+		setLoadCapacityValue({ min: e.target.value, max: e.target.value })
 	}
 
 	function handleOpenList(e) {
@@ -234,6 +128,8 @@ function CatalogMain(props) {
 			setOpenMobileFiltres('nope');
 		}
 	}
+
+
 
 	function handleReturnFiltres(value) {
 		if (value === 'yep') {
@@ -365,11 +261,15 @@ function CatalogMain(props) {
 				</h1>
 
 				<div className='catalog-main__grid-container'>
-					<button className='catalog-main__filter-button'>
-						{
-							'10 Тонн'
-						}
-					</button>
+					{
+						trucksCatalog.sort((a, b) => a.loadCapacity - b.loadCapacity).map((item) => {
+							return (
+								<button className='catalog-main__filter-button' value={item.loadCapacity} key={item.id} onClick={handleButtonFiltres}>
+									{item.loadCapacity} Тонн
+								</button>
+							)
+						})
+					}
 				</div>
 
 				<div className='catalog-main__card-filtres-mobile'>
@@ -384,10 +284,6 @@ function CatalogMain(props) {
 				<div className='catalog-main__filtres-and-content'>
 					<div className='catalog-main__filtres'>
 
-						{
-							handleReturnFiltres('yep')
-						}
-
 						<div className='catalog-main__filtres-main-box'>
 							<h2 className='catalog-main__filtres-main-title'>Парк техники</h2>
 
@@ -400,7 +296,7 @@ function CatalogMain(props) {
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${mobileCraneMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
 											{
-												trucksCatalog.filter((item) => item.type === 'automobileCrane').map((truck) => {
+												trucks.filter((item) => item.type === 'automobileCrane').map((truck) => {
 													return (
 														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
 													)
@@ -416,7 +312,7 @@ function CatalogMain(props) {
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${crawlerСraneMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
 											{
-												trucksCatalog.filter((item) => item.type === 'crawlerCrane').map((truck) => {
+												trucks.filter((item) => item.type === 'crawlerCrane').map((truck) => {
 													return (
 														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
 													)
@@ -432,7 +328,7 @@ function CatalogMain(props) {
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${lowFrameTrawlMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
 											{
-												trucksCatalog.filter((item) => item.type === 'lowFrameTrawl').map((truck) => {
+												trucks.filter((item) => item.type === 'lowFrameTrawl').map((truck) => {
 													return (
 														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
 													)
@@ -443,6 +339,10 @@ function CatalogMain(props) {
 								</ul>
 							</div>
 						</div>
+
+						{
+							handleReturnFiltres('yep')
+						}
 
 					</div>
 
@@ -489,8 +389,133 @@ function CatalogMain(props) {
 				phraseW={'подборе?'}
 			/>
 
+			<Map />
+
 		</section >
 	)
 }
 
 export default CatalogMain;
+
+
+
+
+
+/*
+
+else if ((loadCapacityValue.min > 40 || loadCapacityValue.max < 750) || (liftingHeightValue.min > 3 || liftingHeightValue.max < 130) || (departureArrowValue.min > 35 || departureArrowValue.max < 140)) {
+
+			let result = [];
+
+			if (loadCapacityValue.min > 40 || loadCapacityValue.max < 750) {
+				console.log('вес')
+				if (result.length === 0) {
+					trucksCatalog.forEach((truck) => {
+						if (result.length !== 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							if (result.some(truckItem => truckItem === truck)) {
+								return
+							} else {
+								result.push(truck)
+							}
+						}
+
+						if (result.length === 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							result.push(truck)
+						}
+					})
+				} else {
+					result.forEach((truck) => {
+						if (result.length !== 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							if (result.some(truckItem => truckItem === truck)) {
+								return
+							} else {
+								result.push(truck)
+							}
+						}
+
+						if (result.length === 0 && (truck.loadCapacity >= loadCapacityValue.min && truck.loadCapacity <= loadCapacityValue.max)) {
+							result.push(truck)
+						}
+					})
+				}
+
+			}
+
+
+
+			if (liftingHeightValue.min > 3 || liftingHeightValue.max < 130) {
+				console.log('высота')
+				console.log(result.length)
+
+				if (result.length === 0) {
+					trucksCatalog.forEach((truck) => {
+						if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+							if (result.some(truckItem => truckItem === truck)) {
+								console.log('1 высота осн')
+							} else {
+								result.push(truck)
+							}
+						}
+
+						if (result.length === 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+							console.log('2 высота осн')
+							result.push(truck)
+						}
+					})
+				}
+			} else {
+				result.forEach((truck) => {
+					if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+						if (result.some(truckItem => truckItem === truck)) {
+							console.log('1 высота рез')
+							console.log(result.some(truckItem => truckItem === truck))
+						} else {
+							result.push(truck)
+						}
+					}
+
+
+
+					if (result.length === 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+						console.log('2 высота рез')
+						result.pop(truck)
+					}
+					if (result.length !== 0 && (truck.liftingHeight >= liftingHeightValue.min && truck.liftingHeight <= liftingHeightValue.max)) {
+						console.log('12345')
+						result.push(truck)
+					}
+
+				})
+			}
+
+
+
+			
+						if (departureArrowValue.min > 35 || departureArrowValue.max < 140) {
+							console.log('стрела')
+							trucksCatalog.forEach((truck) => {
+			
+								if (result.length !== 0) {
+									if (result.some(truckItem => truckItem === truck)) {
+										return
+									}
+								}
+			
+								if (truck.departureArrow >= departureArrowValue.min && truck.departureArrow <= departureArrowValue.max) {
+									result.push(truck)
+								}
+							})
+						}
+						
+						if (result.some(truckItem => truckItem === truck)) {
+							return
+						} else {
+							result.push(truck)
+						}
+						
+
+						setTrucks(result)
+
+					} 
+
+*/

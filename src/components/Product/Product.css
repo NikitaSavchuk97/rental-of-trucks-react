@@ -1,0 +1,186 @@
+.product {
+	width: 100%;
+}
+
+.product__main-content {
+
+	width: 100%;
+	height: max-content;
+}
+
+.product__main-content-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	max-width: 1110px;
+
+	margin: 0 auto 0 auto;
+
+	padding: 0 15px 50px 15px;
+}
+
+.product__name {
+	margin: 0;
+
+	color: #2D2D2D;
+
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 141.69%;
+}
+
+.product__info {
+	display: flex;
+	flex-direction: row;
+
+	margin: 0 0 40px 0;
+
+}
+
+.product__image-main {
+	object-fit: cover;
+	max-width: 570px;
+	width: 100%;
+	height: 420px;
+}
+
+.product__tech-info {
+	max-width: 450px;
+	width: 100%;
+	margin: 0 0 0 30px;
+}
+
+.product__tech-info-list {
+
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.product__tech-info-list-item {
+	display: flex;
+	flex-direction: row;
+	margin: 0 0 20px 0;
+
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 156.69%;
+}
+
+.product__tech-info-list-item:last-of-type {
+	margin: 50px 0 40px 0;
+	font-weight: 600;
+}
+
+.product__tech-info-list-item-point {
+	margin: 0;
+}
+
+.product__tech-info-list-item-value {
+	width: 80px;
+	margin: 0 0 0 auto;
+}
+
+.product__rent-button {
+	width: 200px;
+	height: 50px;
+
+	cursor: pointer;
+
+	background: #FCB427;
+	color: white;
+
+	border: none;
+}
+
+.product__rent-button:hover {
+	background: #FF971D;
+}
+
+.product__buttons {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0 0 20px 0;
+
+	position: relative;
+}
+
+.product__buttons:after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	z-index: 800;
+	background-color: #e8e8e8;
+	opacity: 1;
+}
+
+
+
+.product__info-button {
+
+	cursor: pointer;
+	padding: 0 20px 0 20px;
+	background-color: transparent;
+	border: none;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 156.69%;
+
+	position: relative;
+}
+
+.product__info-button-active {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 142.19%;
+
+}
+
+.product__info-button-active:after {
+	background: gray;
+
+	position: absolute;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	z-index: 900;
+	background-color: orange;
+	opacity: 1;
+}
+
+.product__text {}
+
+@media screen and (max-width: 950px) {
+	.product__info {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.product__tech-info {
+		margin: 20px auto 0 0;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.product__image-main {
+		height: 290px;
+	}
+
+
+}

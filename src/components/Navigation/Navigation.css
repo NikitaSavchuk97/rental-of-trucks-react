@@ -36,6 +36,11 @@
 	margin: auto;
 }
 
+.navigation__item-active {
+	border-bottom: 3px solid #2d2d2d;
+}
+
+
 .navigation__link {
 	color: black;
 
@@ -171,6 +176,7 @@
 	.navigation__link {
 		margin: 0 auto 0 10px;
 	}
+
 
 	.navigation__menu-opened {
 		position: absolute;

@@ -15,3 +15,29 @@
 	font-size: 25px;
 	margin: 0;
 }
+
+
+@media screen and (max-width: 650px) {
+
+	.not-found__title {
+		font-size: 175px;
+	}
+
+	.not-found__subtitle {
+		font-size: 18px;
+		margin: 0;
+	}
+
+
+}
+
+@media screen and (max-width: 400px) {
+	.not-found__title {
+		font-size: 125px;
+	}
+
+	.not-found__subtitle {
+		font-size: 13px;
+		margin: 0;
+	}
+}

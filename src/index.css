@@ -2,10 +2,10 @@
 @import url(./vendor/fonts.css);
 
 
-html {
-	scroll-behavior: smooth;
-}
 
+html::-webkit-scrollbar {
+	display: none;
+}
 
 body {
 	margin: 0;
@@ -24,8 +24,8 @@ code {
 
 /*
 
-html::-webkit-scrollbar {
-	display: none;
+html {
+	scroll-behavior: smooth;
 }
 
 */

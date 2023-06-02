@@ -3,6 +3,10 @@ import './CatalogCard.css';
 
 function CatalogCard(props) {
 
+	function handleOpenFeedback() {
+		props.setFeedbackForm(true)
+	}
+
 	return (
 		<div className={`catalog-card ${props.location === '/catalog' ? 'catalog-card__givemesomethissmallcards' : ''} `} >
 
@@ -58,7 +62,7 @@ function CatalogCard(props) {
 				Все характеристики
 			</Link>
 
-			<button className='catalog-card__rent-button'>
+			<button className='catalog-card__rent-button' onClick={handleOpenFeedback} >
 				Арендовать
 			</button>
 		</div >

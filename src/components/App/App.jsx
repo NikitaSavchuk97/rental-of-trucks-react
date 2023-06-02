@@ -23,10 +23,13 @@ import Map from '../Map/Map';
 import CatalogMain from '../CatalogMain/CatalogMain';
 import Product from '../Product/Product';
 import NotFound from '../NotFound/NotFound';
+import FeedbackForm from '../FeedbackForm/FeedbackForm';
 
 function App() {
 	const { pathname } = useLocation()
 	const [currentUser, setCurrentUser] = useState({});
+
+	const [feedbackForm, setFeedbackForm] = useState(false);
 
 	return (
 		<CurrentUserContext.Provider value={currentUser}>
@@ -50,6 +53,7 @@ function App() {
 								<Realized />
 								<Catalog
 									location={pathname}
+									setFeedbackForm={setFeedbackForm}
 								/>
 								<Price />
 								<Delivery
@@ -70,6 +74,7 @@ function App() {
 						element={
 							<CatalogMain
 								location={pathname}
+								setFeedbackForm={setFeedbackForm}
 							/>
 						}
 					/>
@@ -77,11 +82,11 @@ function App() {
 					<Route
 						path='catalog/product/:id'
 						element={
-							<Product />
+							<Product
+								setFeedbackForm={setFeedbackForm}
+							/>
 						}
 					/>
-
-
 
 					<Route
 						path='*'
@@ -90,14 +95,16 @@ function App() {
 						}
 					/>
 
-
-
-
 				</Routes>
 
 				<Footer />
 
+				<FeedbackForm
+					setFeedbackForm={setFeedbackForm}
+					feedbackForm={feedbackForm}
+				/>
 			</div>
+
 		</CurrentUserContext.Provider >
 	);
 }

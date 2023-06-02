@@ -27,6 +27,9 @@ function CatalogMain(props) {
 
 
 	useEffect(() => {
+
+		window.scrollTo(0, 0)
+
 		if (mobileCrane) {
 			console.log('авто')
 			setTrucks(trucksCatalog.filter((item) =>
@@ -296,7 +299,7 @@ function CatalogMain(props) {
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${mobileCraneMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
 											{
-												trucks.filter((item) => item.type === 'automobileCrane').map((truck) => {
+												trucksCatalog.filter((item) => item.type === 'automobileCrane').map((truck) => {
 													return (
 														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
 													)
@@ -312,7 +315,7 @@ function CatalogMain(props) {
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${crawlerСraneMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
 											{
-												trucks.filter((item) => item.type === 'crawlerCrane').map((truck) => {
+												trucksCatalog.filter((item) => item.type === 'crawlerCrane').map((truck) => {
 													return (
 														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
 													)
@@ -328,7 +331,7 @@ function CatalogMain(props) {
 										</button>
 										<ul className={`catalog-main__filtres-sub-list ${lowFrameTrawlMenu ? 'catalog-main__filtres-sub-list_type_active' : ''}`}>
 											{
-												trucks.filter((item) => item.type === 'lowFrameTrawl').map((truck) => {
+												trucksCatalog.filter((item) => item.type === 'lowFrameTrawl').map((truck) => {
 													return (
 														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
 													)
@@ -371,6 +374,7 @@ function CatalogMain(props) {
 									trucks.map((card) => {
 										return (
 											<CatalogCard
+												setFeedbackForm={props.setFeedbackForm}
 												location={props.location}
 												key={card.id}
 												card={card}

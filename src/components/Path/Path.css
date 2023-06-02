@@ -31,3 +31,10 @@
 	text-decoration: none;
 	color: #2d2d2d;
 }
+
+@media screen and (max-width: 400px) {
+	.path__page-path {
+		font-size: 10px;
+	}
+
+}

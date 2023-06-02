@@ -5,6 +5,7 @@ import './Catalog.css';
 import { trucksCatalog } from '../../trucks/trucks'
 import CatalogCard from '../CatalogCard/CatalogCard';
 import SliderArrows from '../SliderArrows/SliderArrows';
+import { Link } from 'react-router-dom';
 
 function Catalog(props) {
 
@@ -39,7 +40,7 @@ function Catalog(props) {
 
 	useEffect(() => {
 		checkWindowWidth()
-	}, [windowWidth])
+	}, [checkWindowWidth])
 
 	return (
 		<section className='catalog'>
@@ -71,6 +72,7 @@ function Catalog(props) {
 							trucks.map((card) => {
 								return (
 									<CatalogCard
+										setFeedbackForm={props.setFeedbackForm}
 										pathname={props.location}
 										key={card.id}
 										card={card}
@@ -82,9 +84,9 @@ function Catalog(props) {
 				</div>
 			</div>
 
-			<button className='catalog__link'>
+			<Link className='catalog__link' to={'/catalog'}>
 				Перейти в каталог
-			</button>
+			</Link>
 
 		</section>
 	)

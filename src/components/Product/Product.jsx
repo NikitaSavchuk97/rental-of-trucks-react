@@ -2,16 +2,22 @@
 import '../Product/Product.css';
 import Path from '../Path/Path';
 import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-function Product() {
+function Product(props) {
 
 	const location = useLocation();
 	const card = location.state.card;
-
-
 	const [description, setDescription] = useState(true);
 	const [documentation, setDocumentation] = useState(false);
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
+
+	function handleOpenFeedback() {
+		props.setFeedbackForm(true)
+	}
 
 	function setActiveDoc() {
 		setDescription(true);
@@ -123,7 +129,9 @@ function Product() {
 
 							</ul>
 
-							<button className='product__rent-button'>Заказать</button>
+							<button className='product__rent-button' onClick={handleOpenFeedback}>
+								Заказать
+							</button>
 
 						</div>
 					</div>

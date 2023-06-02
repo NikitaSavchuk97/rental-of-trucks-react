@@ -178,9 +178,23 @@
 }
 
 @media screen and (max-width: 550px) {
+	.product__name {
+		font-size: 32px;
+	}
+
 	.product__image-main {
 		height: 290px;
 	}
 
+	.product__tech-info-list-item {
+		margin: 0 0 10px 0;
+		font-size: 14px;
+		line-height: 110.69%;
+	}
+}
 
+@media screen and (max-width: 425px) {
+	.product__name {
+		font-size: 23px;
+	}
 }

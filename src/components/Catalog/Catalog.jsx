@@ -40,7 +40,7 @@ function Catalog(props) {
 
 	useEffect(() => {
 		checkWindowWidth()
-	}, [checkWindowWidth])
+	}, [windowWidth]);
 
 	return (
 		<section className='catalog'>

@@ -26,9 +26,10 @@ function CatalogMain(props) {
 	const [departureArrowValue, setDepartureArrowValue] = useState({ min: 35, max: 140 });
 
 
+
 	useEffect(() => {
 
-		window.scrollTo(0, 0)
+		//window.scrollTo(0, 0)
 
 		if (mobileCrane) {
 			console.log('авто')
@@ -81,8 +82,7 @@ function CatalogMain(props) {
 	}
 
 	function handleButtonFiltres(e) {
-		console.log(e.target.value)
-		setLoadCapacityValue({ min: e.target.value, max: e.target.value })
+		setTrucks(trucksCatalog.filter((item) => (item.loadCapacity >= e.target.value && item.loadCapacity <= e.target.value)))
 	}
 
 	function handleOpenList(e) {
@@ -131,6 +131,22 @@ function CatalogMain(props) {
 			setOpenMobileFiltres('nope');
 		}
 	}
+
+
+
+
+	/*
+
+trucksCatalog.sort((a, b) => a.loadCapacity - b.loadCapacity).map((item) => {
+							return (
+								<button className='catalog-main__filter-button' value={item.loadCapacity} key={item.id} onClick={handleButtonFiltres}>
+									{item.loadCapacity} Тонн
+								</button>
+							)
+						})
+
+	*/
+
 
 
 
@@ -273,6 +289,7 @@ function CatalogMain(props) {
 							)
 						})
 					}
+
 				</div>
 
 				<div className='catalog-main__card-filtres-mobile'>

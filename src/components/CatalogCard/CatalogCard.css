@@ -47,6 +47,14 @@
 	line-height: 142.19%;
 }
 
+.catalog-card__title-hidden-name {
+	max-width: 180px;
+
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 .catalog-card__subtitle {
 	display: flex;
 	flex-direction: row;

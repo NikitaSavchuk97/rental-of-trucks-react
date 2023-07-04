@@ -6,6 +6,7 @@ import Delivery from '../Delivery/Delivery';
 import Map from '../Map/Map';
 
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { RangeSlider } from "react-double-range-slider";
 import { trucksCatalog } from '../../trucks/trucks';
 
@@ -318,7 +319,11 @@ trucksCatalog.sort((a, b) => a.loadCapacity - b.loadCapacity).map((item) => {
 											{
 												trucksCatalog.filter((item) => item.type === 'automobileCrane').map((truck) => {
 													return (
-														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
+														<li className='catalog-main__filtres-sub-item' key={truck.id}>
+															<Link className='catalog-main__filtres-sub-item-link' to={`product/${truck.id}`} state={{ card: truck }}>
+																{truck.nameRU} - {truck.loadCapacity}т
+															</Link>
+														</li>
 													)
 												})
 											}
@@ -334,7 +339,11 @@ trucksCatalog.sort((a, b) => a.loadCapacity - b.loadCapacity).map((item) => {
 											{
 												trucksCatalog.filter((item) => item.type === 'crawlerCrane').map((truck) => {
 													return (
-														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
+														<li className='catalog-main__filtres-sub-item' key={truck.id}>
+															<Link className='catalog-main__filtres-sub-item-link' to={`product/${truck.id}`} state={{ card: truck }}>
+																{truck.nameRU} - {truck.loadCapacity}т
+															</Link>
+														</li>
 													)
 												})
 											}
@@ -350,7 +359,11 @@ trucksCatalog.sort((a, b) => a.loadCapacity - b.loadCapacity).map((item) => {
 											{
 												trucksCatalog.filter((item) => item.type === 'lowFrameTrawl').map((truck) => {
 													return (
-														<li className='catalog-main__filtres-sub-item' key={truck.id}><a className='catalog-main__filtres-sub-item-link' href={truck.link}>{truck.nameRU} - {truck.loadCapacity}т</a></li>
+														<li className='catalog-main__filtres-sub-item' key={truck.id}>
+															<Link className='catalog-main__filtres-sub-item-link' to={`product/${truck.id}`} state={{ card: truck }}>
+																{truck.nameRU} - {truck.loadCapacity}т
+															</Link>
+														</li>
 													)
 												})
 											}
@@ -403,7 +416,7 @@ trucksCatalog.sort((a, b) => a.loadCapacity - b.loadCapacity).map((item) => {
 					</div>
 
 				</div>
-			</div>
+			</div >
 
 			<Delivery
 				phraseY={'Нужна помощь в'}

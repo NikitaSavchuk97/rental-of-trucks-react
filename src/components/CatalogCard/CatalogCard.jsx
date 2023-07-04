@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './CatalogCard.css';
 
+
 function CatalogCard(props) {
 
 	function handleOpenFeedback() {
@@ -16,7 +17,7 @@ function CatalogCard(props) {
 			</Link>
 
 
-			<h3 className='catalog-card__title' >
+			<h3 className={`catalog-card__title ${props.location === '/catalog' ? 'catalog-card__title-hidden-name' : ''}`}>
 				{props.card.nameRU}
 			</h3>
 

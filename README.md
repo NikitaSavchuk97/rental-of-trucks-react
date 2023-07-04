@@ -1,1 +1,0 @@
-GH-Pages: https://nikitasavchuk97.github.io/rental-of-trucks-react/

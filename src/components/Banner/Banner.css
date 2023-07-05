@@ -3,17 +3,16 @@
 	flex-direction: row;
 	justify-content: flex-start;
 
-	background-color: #F1F1F1;
+	background-image: url(../../images/banner-main.jpg);
+	background-position: start;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	width: 100%;
-	height: 659px;
 }
 
 .banner__offer {
-	background-image: url(../../images/banner-offer.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-color: rgba(255, 255, 255, 0.75);
 	height: 600px;
 	min-width: 55%;
 }
@@ -87,24 +86,29 @@
 }
 
 .banner__call:hover {
-	opacity: 0.6;
+	background-color: #FF971D;
 }
 
 .banner__technic {
+	display: flex;
 	max-width: 220px;
 	width: 100%;
 
 	cursor: pointer;
+	text-decoration: none;
+	align-items: center;
+	justify-content: center;
 
 	background-color: transparent;
 
-	color: #2D2D2D;
+	color: #535554;
 
-	border: 1px solid #2D2D2D;
+	border: 1px solid #535554;
 }
 
 .banner__technic:hover {
-	opacity: 0.6;
+	color: #2d2d2d;
+	border: 1px solid #2d2d2d;
 }
 
 
@@ -112,12 +116,10 @@
 .banner__image {
 	object-fit: cover;
 	width: 100%;
-	height: 600px;
 }
 
 .banner__gallery {
 	width: 100%;
-	height: 600px;
 }
 
 @keyframes display {

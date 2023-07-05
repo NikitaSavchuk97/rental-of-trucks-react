@@ -72,6 +72,7 @@ function Catalog(props) {
 							trucks.map((card) => {
 								return (
 									<CatalogCard
+										handleOpenFeedback={props.handleOpenFeedback}
 										setFeedbackForm={props.setFeedbackForm}
 										pathname={props.location}
 										key={card.id}

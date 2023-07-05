@@ -31,6 +31,10 @@ function App() {
 
 	const [feedbackForm, setFeedbackForm] = useState(false);
 
+	function handleOpenFeedback() {
+		setFeedbackForm(true)
+	}
+
 	return (
 		<CurrentUserContext.Provider value={currentUser}>
 			<div className='page'>
@@ -47,13 +51,17 @@ function App() {
 						path='/'
 						element={
 							<>
-								<Banner />
+								<Banner
+									setFeedbackForm={setFeedbackForm}
+									handleOpenFeedback={handleOpenFeedback}
+								/>
 								<Crane />
 								<Reliable />
 								<Realized />
 								<Catalog
 									location={pathname}
 									setFeedbackForm={setFeedbackForm}
+									handleOpenFeedback={handleOpenFeedback}
 								/>
 								<Price />
 								<Delivery
@@ -75,6 +83,7 @@ function App() {
 							<CatalogMain
 								location={pathname}
 								setFeedbackForm={setFeedbackForm}
+								handleOpenFeedback={handleOpenFeedback}
 							/>
 						}
 					/>
@@ -84,6 +93,7 @@ function App() {
 						element={
 							<Product
 								setFeedbackForm={setFeedbackForm}
+								handleOpenFeedback={handleOpenFeedback}
 							/>
 						}
 					/>

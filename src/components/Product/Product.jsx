@@ -15,10 +15,6 @@ function Product(props) {
 		window.scrollTo(0, 0)
 	}, [])
 
-	function handleOpenFeedback() {
-		props.setFeedbackForm(true)
-	}
-
 	function setActiveDoc() {
 		setDescription(true);
 		setDocumentation(false);
@@ -129,7 +125,7 @@ function Product(props) {
 
 							</ul>
 
-							<button className='product__rent-button' onClick={handleOpenFeedback}>
+							<button className='product__rent-button' onClick={props.handleOpenFeedback}>
 								Заказать
 							</button>
 

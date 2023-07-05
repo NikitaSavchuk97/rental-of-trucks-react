@@ -4,18 +4,12 @@ import './CatalogCard.css';
 
 function CatalogCard(props) {
 
-	function handleOpenFeedback() {
-		props.setFeedbackForm(true)
-	}
-
 	return (
 		<div className={`catalog-card ${props.location === '/catalog' ? 'catalog-card__givemesomethissmallcards' : ''} `} >
-
 
 			<Link to={`${props.pathname === '/' ? 'catalog/product/' : 'product/'}${props.card.id}`} state={{ card: props.card }} className='catalog-card__image-wrapper'>
 				<img className='catalog-card__image' src={props.card.image} alt={props.card.nameRU} />
 			</Link>
-
 
 			<h3 className={`catalog-card__title ${props.location === '/catalog' ? 'catalog-card__title-hidden-name' : ''}`}>
 				{props.card.nameRU}
@@ -63,7 +57,7 @@ function CatalogCard(props) {
 				Все характеристики
 			</Link>
 
-			<button className='catalog-card__rent-button' onClick={handleOpenFeedback} >
+			<button className='catalog-card__rent-button' onClick={props.handleOpenFeedback} >
 				Арендовать
 			</button>
 		</div >

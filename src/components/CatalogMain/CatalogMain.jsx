@@ -27,10 +27,11 @@ function CatalogMain(props) {
 	const [departureArrowValue, setDepartureArrowValue] = useState({ min: 35, max: 140 });
 
 
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
 
 	useEffect(() => {
-
-		//window.scrollTo(0, 0)
 
 		if (mobileCrane) {
 			console.log('авто')
@@ -404,6 +405,7 @@ trucksCatalog.sort((a, b) => a.loadCapacity - b.loadCapacity).map((item) => {
 									trucks.map((card) => {
 										return (
 											<CatalogCard
+												handleOpenFeedback={props.handleOpenFeedback}
 												setFeedbackForm={props.setFeedbackForm}
 												location={props.location}
 												key={card.id}

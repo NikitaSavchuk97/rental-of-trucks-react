@@ -1,13 +1,8 @@
 import './Banner.css';
-import bannerLiebherr1 from '../../images/banner-liebherr-1.jpg'
-import bannerLiebherr2 from '../../images/banner-liebherr-2.jpg'
-import bannerLiebherr3 from '../../images/banner-liebherr-3.jpg'
-import bannerLiebherr4 from '../../images/banner-liebherr-4.jpg'
-import bannerLiebherr5 from '../../images/banner-liebherr-5.jpg'
-
+import { Link } from 'react-router-dom';
 import bannerLiebherrLogoLower from '../../images/banner-liebherr-logo-lower.svg'
 
-function Banner() {
+function Banner(props) {
 	return (
 		<section className='banner'>
 
@@ -28,23 +23,15 @@ function Banner() {
 					</p>
 
 					<div className='banner__buttons'>
-						<button className='banner__call'>
+						<button className='banner__call' onClick={props.handleOpenFeedback}>
 							Заказать звонок
 						</button>
 
-						<button className='banner__technic'>
+						<Link to='/catalog' className='banner__technic'>
 							Каталог техники
-						</button>
+						</Link>
 					</div>
 				</div>
-			</div>
-
-			<div className='banner__gallery'>
-				<img className='banner__image' src={bannerLiebherr1} alt="" />
-				<img className='banner__image' src={bannerLiebherr2} alt="" />
-				<img className='banner__image' src={bannerLiebherr3} alt="" />
-				<img className='banner__image' src={bannerLiebherr4} alt="" />
-				<img className='banner__image' src={bannerLiebherr5} alt="" />
 			</div>
 
 		</section>

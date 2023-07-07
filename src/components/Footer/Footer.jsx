@@ -96,19 +96,19 @@ function Footer() {
 					<h3 className='footer__nav-list-title'>Услуги</h3>
 					<ul className='footer__nav-list-links'>
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/catalog">
 								Аренда гусеничного крана
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/catalog">
 								Аренда мобильного крана
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/catalog">
 								Аренда низкорамного трала
 							</a>
 						</li>

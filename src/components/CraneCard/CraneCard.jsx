@@ -16,7 +16,7 @@ function CraneCard(props) {
 						props.card.about
 					}
 				</p>
-				<a className='crane-card__link' href={props.card.link}>Выбрать спецтехнику</a>
+				<a className='crane-card__link' href={'/catalog'}>Выбрать спецтехнику</a>
 			</div>
 		</div>
 

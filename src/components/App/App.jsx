@@ -39,7 +39,10 @@ function App() {
 		<CurrentUserContext.Provider value={currentUser}>
 			<div className='page'>
 
-				<Header />
+				<Header
+
+					handleOpenFeedback={handleOpenFeedback}
+				/>
 				<Navigation
 					location={pathname}
 				/>
@@ -52,15 +55,15 @@ function App() {
 						element={
 							<>
 								<Banner
-									setFeedbackForm={setFeedbackForm}
 									handleOpenFeedback={handleOpenFeedback}
 								/>
 								<Crane />
-								<Reliable />
+								<Reliable
+									handleOpenFeedback={handleOpenFeedback}
+								/>
 								<Realized />
 								<Catalog
 									location={pathname}
-									setFeedbackForm={setFeedbackForm}
 									handleOpenFeedback={handleOpenFeedback}
 								/>
 								<Price />
@@ -82,7 +85,6 @@ function App() {
 						element={
 							<CatalogMain
 								location={pathname}
-								setFeedbackForm={setFeedbackForm}
 								handleOpenFeedback={handleOpenFeedback}
 							/>
 						}
@@ -92,7 +94,6 @@ function App() {
 						path='catalog/product/:id'
 						element={
 							<Product
-								setFeedbackForm={setFeedbackForm}
 								handleOpenFeedback={handleOpenFeedback}
 							/>
 						}

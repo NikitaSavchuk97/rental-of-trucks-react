@@ -32,43 +32,37 @@ function Footer() {
 					<h3 className='footer__nav-list-title'>Клиентам</h3>
 					<ul className='footer__nav-list-links'>
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/about-the-company">
 								О компании
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/services">
 								Услуги
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/catalog">
 								Каталог техники
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
-								Аренда кранов
-							</a>
-						</li>
-
-						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/objects">
 								Наши работы
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/prices">
 								Цены
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/contacts">
 								Контакты
 							</a>
 						</li>
@@ -79,26 +73,20 @@ function Footer() {
 					<h3 className='footer__nav-list-title'>Техника</h3>
 					<ul className='footer__nav-list-links'>
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
+							<a className='footer__nav-list-item-link' href="/catalog">
 								Гусиничные краны
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
-								Мобильные краны
+							<a className='footer__nav-list-item-link' href="/catalog">
+								Автомобильные краны
 							</a>
 						</li>
 
 						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
-								Низеорамные краны
-							</a>
-						</li>
-
-						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
-								Модульные платформы
+							<a className='footer__nav-list-item-link' href="/catalog">
+								Низкорамные тралы
 							</a>
 						</li>
 					</ul>
@@ -121,19 +109,7 @@ function Footer() {
 
 						<li className='footer__nav-list-item'>
 							<a className='footer__nav-list-item-link' href="#">
-								Аренда башенного крана
-							</a>
-						</li>
-
-						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="#">
-								Перевозка негабаритного груза
-							</a>
-						</li>
-
-						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="">
-								Разработка ППРК
+								Аренда низкорамного трала
 							</a>
 						</li>
 					</ul>

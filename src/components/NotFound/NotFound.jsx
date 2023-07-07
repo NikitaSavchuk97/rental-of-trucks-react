@@ -1,4 +1,5 @@
 import '../NotFound/NotFound.css';
+import img from '../../images/catalog-photo-1.jpg'
 
 function NotFound() {
 	return (

@@ -4,7 +4,7 @@ import logoClock from '../../images/logo-clock.svg';
 import logoSpot from '../../images/logo-spot.svg';
 import logoPhone from '../../images/logo-phone.svg';
 
-function Header() {
+function Header(props) {
 	return (
 		<>
 			<header className='header'>
@@ -30,7 +30,7 @@ function Header() {
 					<p className='header__address-title'>г.Москва, ул.Куликовская, 12</p>
 				</div>
 
-				<button className='header__contact-me'>
+				<button className='header__contact-me' onClick={props.handleOpenFeedback}>
 					Свяжитесь со мной
 				</button>
 

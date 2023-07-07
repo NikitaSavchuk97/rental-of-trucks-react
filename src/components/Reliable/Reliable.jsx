@@ -5,7 +5,7 @@ import reliableLogo2 from '../../images/reliable-logo-2.svg'
 import reliableLogo3 from '../../images/reliable-logo-3.svg'
 import reliableLogo4 from '../../images/reliable-logo-4.svg'
 
-function Reliable() {
+function Reliable(props) {
 	return (
 		<section className='reliable'>
 
@@ -35,7 +35,7 @@ function Reliable() {
 							Обращение в компанию гарантирует комплексный подход к решению поставленных задач. Получить больше информации можно у менеджеров Компании Еврокран.
 						</p>
 
-						<button className='reliable__link'>
+						<button className='reliable__link' onClick={props.handleOpenFeedback}>
 							Заказать звонок
 						</button>
 

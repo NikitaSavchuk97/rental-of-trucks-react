@@ -108,7 +108,9 @@ function App() {
 
 				</Routes>
 
-				<Footer />
+				<Footer
+					handleOpenFeedback={handleOpenFeedback}
+				/>
 
 				<FeedbackForm
 					setFeedbackForm={setFeedbackForm}

@@ -12,7 +12,7 @@ import logoYandex from '../../images/logo-yandex.svg';
 
 
 
-function Footer() {
+function Footer(props) {
 	return (
 		<footer className='footer'>
 			<div className='footer__container'>
@@ -70,7 +70,9 @@ function Footer() {
 				</nav>
 
 				<nav className='footer__nav-list'>
+
 					<h3 className='footer__nav-list-title'>Техника</h3>
+
 					<ul className='footer__nav-list-links'>
 						<li className='footer__nav-list-item'>
 							<a className='footer__nav-list-item-link' href="/catalog">
@@ -92,32 +94,9 @@ function Footer() {
 					</ul>
 				</nav>
 
-				<nav className='footer__nav-list'>
-					<h3 className='footer__nav-list-title'>Услуги</h3>
-					<ul className='footer__nav-list-links'>
-						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="/catalog">
-								Аренда гусеничного крана
-							</a>
-						</li>
-
-						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="/catalog">
-								Аренда мобильного крана
-							</a>
-						</li>
-
-						<li className='footer__nav-list-item'>
-							<a className='footer__nav-list-item-link' href="/catalog">
-								Аренда низкорамного трала
-							</a>
-						</li>
-					</ul>
-				</nav>
-
 				<div className='footer__contact-me'>
 
-					<button className='footer__contact-me-button'>
+					<button className='footer__contact-me-button' onClick={props.handleOpenFeedback}>
 						Свяжитесь со мной
 					</button>
 

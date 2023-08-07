@@ -11,7 +11,7 @@ function Contacts() {
 	const [frnUsers, setFrnUsers] = useState([])
 
 	const getApiUsers = async () => {
-		return (await fetch('http://localhost:3001/frn-users')).json();
+		return (await fetch('https://api-snv-project-movies.ru/frn-users')).json();
 	}
 
 	const handleGetData = async () => {

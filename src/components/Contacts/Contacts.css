@@ -1,0 +1,15 @@
+.contacts {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: max-content;
+}
+
+.contacts-wrapper {
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+	padding: 10px;
+}
+
+.frn-users {}

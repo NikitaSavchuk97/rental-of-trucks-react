@@ -25,6 +25,15 @@ import Product from '../Product/Product';
 import NotFound from '../NotFound/NotFound';
 import FeedbackForm from '../FeedbackForm/FeedbackForm';
 
+import Contacts from '../Contacts/Contacts';
+
+
+
+
+
+
+
+
 function App() {
 	const { pathname } = useLocation()
 	const [currentUser, setCurrentUser] = useState({});
@@ -97,6 +106,14 @@ function App() {
 								handleOpenFeedback={handleOpenFeedback}
 							/>
 						}
+					/>
+
+					<Route
+						path='contacts'
+						element={
+							<Contacts/>
+						}
+
 					/>
 
 					<Route
